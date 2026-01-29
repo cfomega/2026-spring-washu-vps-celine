@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+
+        <style>
+      html,
+      body {
+        background-color: rgb(251, 234, 199);
+      }
+      </style>
+    <head>
+  <title>Simple HTML Table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 60%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: rgb(240, 220, 171);
+    }
+  </style>
+</head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dewey's (University City) </title>
+
+    <style>
+        h1 {
+            font-family: "Arial";
+            font-weight: bold;
+            color: brown;
+            font-size: 35px;
+            text-align: left;
+        }
+        h2{
+            font-family: "Arial";
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            font-size: 25px;
+            text-align: left;
+            text-decoration: underline;
+        }
+        p {
+            color: rgb(0, 0, 0);
+        }
+    </style>
+
 </head>
 <body>
-    <h1>Dewey's Pizza - University City Menu</h1>
-    <p> HTML 3: Added bold, links, and more information from the original menu -- accomplished all html elements but the div or span</p>   
+    <h1 style="text-align: center;font-family: Arial, Helvetica, sans-serif; color: brown; font-size: 80px"> Dewey's Pizza - University City Menu</h1>
+    <p style="color: grey;"> HTML 5: Added a greeting at the top, a section for additional links, and more spacing in between the make your own section.</p>
+    <p style="text-align: center"> Welcome to Dewey's Pizza from the University City, MO region! We stay serious about pizza, without taking ourselves too seriously.</p>
+<hr>
+<h2> Additional Links </h2>
     <p> In case you prefer a PDF form of our menu click <a href = "https://deweyspizza.com/wp-content/uploads/2025/04/Deweys-Pizza-Carryout-Menu-2025.pdf">HERE</a></p>
     <p> For more info or inquires call <a href = "tel:314-555-1234">HERE</a></p>
 
@@ -115,7 +165,7 @@
 </table>
 <p>Calzone includes ricotta, mozzarella, parmesan, and your choice of one topping.</p>
 
-<p>Refer to the toppings section for additional selection. The charge remains $2.00 per topping.</p>
+<p>Refer to the <b>Toppings</b> section for additional selection. <i><b>The charge remains $2.00 per topping.</i></b></p>
 
 <br>
 <hr>
@@ -144,6 +194,7 @@
   </tr>
 </table>
 
+<br>
 <h2> 2. Base </h2>
 <table>
   <tr>
@@ -163,8 +214,9 @@
   </tr>
 </table>
 
+<br>
 <h2> 3. Toppings </h2>
-<p>Refer to the toppings section for additional selection. Please note there is a separate charge based on pizza size.</p>
+<p>Refer to the <b>Toppings</b> section for additional selection. Please note <b><i>there is a separate charge</i></b> based on pizza size.</p>
 
 <br>
 <hr>
@@ -187,9 +239,9 @@
     <td>17"</td>
     <td>$3.30</td>
   </tr>
-</table>|
+</table>
 
-<p>Additional toppings charge for Dewey's Calzone is in the Calzone section.</p>
+<p><b><i>Additional toppings charge </i></b>for Dewey's Calzone is in the <b>Calzone</b> section.</p>
 
 <h2>List of Toppings</h2>
 <details close>
@@ -258,7 +310,7 @@
 <br>
 <hr>
 <h1> Specialty Pizzas </h1>
-<p>Satisfy two cravings with one pizza by ordering a half-and-half option. Available with all sizes and styles.</p>
+<p>Satisfy <b>two cravings</b> with one pizza by ordering a <b>half-and-half</b> option. Available with all sizes and styles.</p>
 <table>
   <tr>
     <th>Pizza Type</th>
@@ -354,6 +406,6 @@
 <hr>
 <h1>Desserts</h1>
 <p>All of our desserts come from local confectioners. Ask your server for the latest selections. </p>
-<p>The following major food allergens may be used as ingredients in this facility: milk, egg, fish, shellfish, tree nuts, peanuts, wheat, soy, and sesame. Please speak with a team member for more infromation.</p>
+<p><b>The following major food allergens may be used as ingredients in this facility:</b> <i>milk, egg, fish, shellfish, tree nuts, peanuts, wheat, soy, and sesame</i>. Please speak with a team member for more infromation.</p>
 </body>
 </html>
