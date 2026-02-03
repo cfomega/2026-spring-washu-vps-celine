@@ -6,38 +6,98 @@
       html,
       body {
         background-color: rgb(251, 234, 199);
+        margin: 20px;
+        padding: 20px;
       }
+
       </style>
-    
+    <head>
+  <title>Simple HTML Table</title>
+  <style>
+    @font-face {
+      font-family: "Eveleth Clean Thin";
+      src: url("Fonts/eveleth-clean-thin.otf") format("opentype");
+    }
+   
+   @font-face {
+      font-family: "Eveleth Clean Regular";
+      src: url("Fonts/eveleth-clean-regular.otf") format("opentype");
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+      font-family: "Eveleth Clean Thin", sans-serif;
+      font-size: medium;
+      width: 20%;
+      height: 50px;
+    }
+
+    th {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+      background-color: rgb(240, 220, 171);
+      font-family: "Eveleth Clean Regular", sans-serif;
+      font-size: larger;
+    }
+  </style>
+</head>
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dewey's (University City) </title>
+    <title>Dewey's Pizza (University City) </title>
 
+<head>
     <style>
+    @font-face {
+      font-family: "Eveleth Bold";
+      src: url("Fonts/eveleth-bold.otf") format("opentype");
+    }
+   
+   @font-face {
+      font-family: "Eveleth Clean Regular";
+      src: url("Fonts/eveleth-clean-regular.otf") format("opentype");
+    }
+
         h1 {
-            font-family: "Arial";
-            font-weight: bold;
+            font-family: "Eveleth Bold", serif;
             color: brown;
             font-size: 35px;
-            text-align: left;
+            text-align: center;
         }
         h2{
-            font-family: "Arial";
+            font-family: "Eveleth Clean Regular", sans-serif;
             font-weight: bold;
             color: rgb(0, 0, 0);
             font-size: 25px;
             text-align: left;
-            text-decoration: underline;
         }
         p {
             color: rgb(0, 0, 0);
+            font-family: "Georgia", serif;
         }
-    </style>
 
+        hr{
+            border: 2px solid rgb(202, 179, 141);
+            align-items: center;
+            width: 100%;
+        }
+
+    </style>
 </head>
+
 <body>
-    <h1 style="text-align: center;font-family: Arial, Helvetica, sans-serif; color: brown; font-size: 80px"> Dewey's Pizza - University City Menu</h1>
-    <p style="color: grey;"> HTML + CSS 1: Changed some alignment for the greeting, added a background color</p>
+    <h1 style="text-align: center;font-family: Eveleth Bold, sans-serif; color: brown; font-size: 80px"> Dewey's Pizza</h1>
+    <p style="color: grey;"> HTML + CSS 4: changed margins and alignments, added descriptions to each item on the menu</p>
     <p style="text-align: center"> Welcome to Dewey's Pizza from the University City, MO region! We stay serious about pizza, without taking ourselves too seriously.</p>
 <hr>
 <h2> Additional Links </h2>
@@ -52,31 +112,37 @@
     <th>Salad Type</th>
     <th>Side</th>
     <th>Entree</th>
+    <th>Additional Notes</th>
   </tr>
   <tr>
     <td>House</td>
     <td>$7.95</td>
     <td>$11.25</td>
+    <td style="font-family: Georgia; text-align:left">Field Greens, Toasted Pine Nuts, Dried Cranberries, Goat Cheese, Balsamic Vinnigrette</td>
   </tr>
   <tr>
     <td>Candied Walnut & Grape</td>
     <td>$7.95</td>
     <td>$11.25</td>
+    <td style="font-family: Georgia; text-align:left">Field Greens, Candied Walnuts, Red Grapes, Gorgonzola, Citrus Basil Vinnigrette</td>
   </tr>
   <tr>
     <td>Peppercorn Ranch</td>
     <td>$7.75</td>
     <td>$10.25</td>
+    <td style="font-family: Georgia; text-align:left">Romaine Lettuce, Bacon, Tomatoes, Shaved Parmesan, Red Onions, Peppercorn Ranch Dresing</td>
   </tr>
   <tr>
     <td>Caesar</td>
     <td>$7.75</td>
     <td>$10.25</td>
+    <td style="font-family: Georgia; text-align:left">Romaine Lettuce, Parmesan Garlic Croutons, Shaved Parmesan, Caesar Dressing</td>
   </tr>
   <tr>
     <td>Chicken Add-On</td>
     <td>$2.00</td>
     <td>$3.00</td>
+    <td style="font-family: Georgia; text-align:left">All-Natural</td>
   </tr>
 </table>
 
@@ -136,44 +202,51 @@
   <tr>
     <th>Calzone Items</th>
     <th>Price</th>
+    <th>Additional Notes</th>
   </tr>
   <tr>
     <td>Dewey's Calzone</td>
     <td>$11.25</td>
+    <td style="font-family: Georgia; text-align:left">Includes Mozzarella and Ricotta with your choice of up to three ingredients</td>
   </tr>
   <tr>
     <td>Additional Toppings (per)</td>
     <td>$2.00</td>
+    <td style="font-family: Georgia; text-align:left">Refer to the <b>Toppings</b> section for additional selection. <i><b>The charge remains $2.00 per topping.</i></b></td>
   </tr>
 </table>
-<p>Calzone includes ricotta, mozzarella, parmesan, and your choice of one topping.</p>
 
-<p>Refer to the <b>Toppings</b> section for additional selection. <i><b>The charge remains $2.00 per topping.</i></b></p>
+<p></p>
 
 <br>
 <hr>
 <h1> Create Your Own Pizza </h1>
- <h2> 1. Size </h2>
+ <h2> 1. Select pie size </h2>
  <table>
   <tr>
     <th>Pizza Size</th>
     <th>Price</th>
+    <th>Additional Notes</th>
   </tr>
   <tr>
-    <td>11" (8 Slices)</td>
+    <td>11" </td>
     <td>$11.50</td>
+    <td style="font-family: Georgia; text-align:left">Serves up to 8 slices</td>
   </tr>
   <tr>
-    <td>13" (8 Slices)</td>
+    <td>13"</td>
     <td>$15.75</td>
+    <td style="font-family: Georgia; text-align:left">Serves up to 8 slices</td>
   </tr>
   <tr>
-    <td>17" (12 Slices)</td>
+    <td>17"</td>
     <td>$19.50</td>
+        <td style="font-family: Georgia; text-align:left">Serves up to 12 slices</td>
   </tr>
    <tr>
     <td>12" Gluten-Free Crust</td>
     <td>$15.00</td>
+    <td style="font-family: Georgia; text-align:left">Accomodates for any gluten allergens</td>
   </tr>
 </table>
 
@@ -183,17 +256,21 @@
   <tr>
     <th>Base Type</th>
     <th>Price</th>
+    <th>Additional Notes</th>
   </tr>
     <td>Red Sauce</td>
     <td>No Additional Fee</td>
+    <td style="font-family: Georgia; text-align:left">Red Sauce and Mozzarella</td>
   </tr>
   <tr>
     <td>White Sauce</td>
     <td>No Additional Fee</td>
+    <td style="font-family: Georgia; text-align:left">Olive Oil, Minced Garlic, Mozzarella, and Fontina</td> 
   </tr>
   <tr>
-    <td>Dairy-Free Cheese (with either sauce)</td>
+    <td>Dairy-Free Cheese</td>
     <td>$2.00</td>
+    <td style="font-family: Georgia; text-align:left">Available with any pizza with either Red or White Sauce</td>
   </tr>
 </table>
 
@@ -227,6 +304,33 @@
 <p><b><i>Additional toppings charge </i></b>for Dewey's Calzone is in the <b>Calzone</b> section.</p>
 
 <h2>List of Toppings</h2>
+<style>
+    @font-face {
+      font-family: "Eveleth Clean Regular";
+      src: url("Fonts/eveleth-clean-regular.otf") format("opentype");
+    }
+
+    @font-face {
+      font-family: "Eveleth Clean Thin";
+      src: url("Fonts/eveleth-clean-thin.otf") format("opentype");
+    }
+
+    details {
+        font-family: "Evelth Clean Regular", sans-serif;
+        margin-bottom: 10px;
+    }
+    summary {
+        font-family: "Evelth Clean Thin", sans-serif;       
+        font-weight: bold;
+        cursor: pointer;
+    }
+    ul {
+        font-family: "Evelth Clean Thin", sans-serif;
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+</style>
+
 <details close>
   <summary><b>Veggies</b></summary>
     <ul>
@@ -300,54 +404,63 @@
     <th>11"</th>
     <th>13"</th>
     <th>17"</th>
+    <th>Additional Notes</th>
   </tr>
   <tr>
     <td>Ryan's Inferno</td>
     <td>$17.75</td>
     <td>$21.50</td>
     <td>$25.75</td>
+    <td style="font-family: Georgia; text-align:left">Olive Oil, Mozzarella, All-Natural Buffalo Chicken, Gorgonzola, Red Onions, with Ranch and Celery after the bake</td>
   </tr>
   <tr>
     <td>Caprice</td>
     <td>$17.95</td>
     <td>$21.95</td>
     <td>$26.25</td>
+    <td style="font-family: Georgia; text-align:left">Olive Oil, Minced Garlic, Fontina, Fresh Basil, Fresh Mozzarella, Roasted Cherry Tomatoes</td>
   </tr>
   <tr>
     <td>Dr. Dre</td>
     <td>$17.95</td>
     <td>$21.95</td>
     <td>$26.25</td>
+    <td style="font-family: Georgia; text-align:left">Olive Oil, Mozzarella, Green Bell Peppers, Red Onions, All-Natural Chicken, Bacon, House-Pickled Jalapenos, with Tomatoes and Ranch after the bake</td>
   </tr>
   <tr>
     <td>Edgar Allen Poe</td>
     <td>$17.95</td>
     <td>$21.95</td>
     <td>$26.25</td>
+    <td style="font-family: Georgia; text-align:left">Olive Oil, Mozzarella, Fontina, Mushrooms, Whole Roasted Garlic, Kalamata Olives, Goat Cheese, with Tomatoes and Parsley after the bake</td>
   </tr>
     <tr>
         <td>Socrates' Revenge</td>
         <td>$17.95</td>
         <td>$21.95</td>
         <td>$26.25</td>
+        <td style="font-family: Georgia; text-align:left">Olive Oil, Minced Garlic, Mozzarella, Fontina, Spinach, Black Olives, Green Olives, Feta, Red Onions, Tomatoes</td>
     </tr>
     <tr>
         <td>Southwest BBQ Chicken</td>
         <td>$17.95</td>
         <td>$21.95</td>
         <td>$26.25</td>
+        <td style="font-family: Georgia; text-align:left">Olive Oil, Smoked Cheddar, Mozzarella, Black Bean-Corn Salsa, All-Natural Chicken, Roasted Red Peppers, BBQ Sauce</td>
     </tr>
     <tr>
         <td>Porky Fig</td>
         <td>$17.75</td>
         <td>$21.50</td>
         <td>$25.75</td>
+        <td style="font-family: Georgia; text-align:left">Fig Jam, Mozzarella, Fontina, Prosciutto, Caramelized Red Onions, Gorgonzola</td>
     </tr>
     <tr>
         <td>Don Corleone</td>
         <td>$17.95</td>
         <td>$21.95</td>
         <td>$26.25</td>
+        <td style="font-family: Georgia; text-align:left">Red Sauce, Mozzarella, Pepperoni, Genoa Salami, Capicola Ham, Oregeno</td>
 
     </tr>
     <tr>
@@ -355,12 +468,14 @@
         <td>$17.95</td>
         <td>$21.95</td>
         <td>$26.25</td>
+        <td style="font-family: Georgia; text-align:left">Red Sauce, Mozzarella, Minced Garlic, Mushrooms, Goat Cheese, Artichokes, Pesto</td>
     </tr>
     <tr>
         <td>Bronx Bomber</td>
         <td>$17.95</td>
         <td>$21.95</td>
         <td>$26.25</td>
+        <td style="font-family: Georgia; text-align:left">Red Sauce, Mozarella, Pepperoni, Sausage, Mushrooms, White Onions, Green Bell Peppers, Black Olives</td>
 
     </tr>
     <tr>
@@ -368,6 +483,7 @@
         <td>$17.75</td>
         <td>$21.50</td>
         <td>$25.75</td>
+        <td style="font-family: Georgia; text-align:left">Red Sauce, Mozzarella, Mushrooms, White Onions, Black Olives, Green Bell Peppers, with Tomatoes and Parsley after the bake</td>
 
     </tr>
     <tr>
@@ -375,12 +491,14 @@
         <td>$17.95</td>
         <td>$21.50</td>
         <td>$25.75</td>
+        <td style="font-family: Georgia; text-align:left">Red Sauce, Fresh Basil, Fresh Mozzarella, Italian Meatballs, Oregeno, Shaved Parmesan</td>
     </tr>
     <tr>
         <td>Hawaiian</td>
         <td>$16.50</td>
         <td>$21.25</td>
         <td>$25.50</td>
+        <td style="font-family: Georgia; text-align:left">Red Sauce, Mozzarella, Canadian Bacon, Fresh Pineapple</td>
 
     </tr>
 </table>
