@@ -70,9 +70,10 @@
 
         h1 {
             font-family: "Eveleth Bold", serif;
-            color: brown;
+            color: #cf0a2c;
             font-size: 35px;
             text-align: center;
+
         }
         h2{
             font-family: "Eveleth Clean Regular", sans-serif;
@@ -80,6 +81,8 @@
             color: rgb(0, 0, 0);
             font-size: 25px;
             text-align: left;
+            bottom: 10px;
+            top: 10px;
         }
         p {
             color: rgb(0, 0, 0);
@@ -97,12 +100,14 @@
 
 <body>
     <h1 style="text-align: center;font-family: Eveleth Bold, sans-serif; color: brown; font-size: 80px"> Dewey's Pizza</h1>
-    <p style="color: grey;"> HTML + CSS 4: changed margins and alignments, added descriptions to each item on the menu</p>
+    <p style="color: grey;"> HTML + CSS 4: changed margins and alignments, added descriptions to each item on the menu, attempted tables for the toppings section</p>
     <p style="text-align: center"> Welcome to Dewey's Pizza from the University City, MO region! We stay serious about pizza, without taking ourselves too seriously.</p>
 <hr>
+<br>
 <h2> Additional Links </h2>
     <p> In case you prefer a PDF form of our menu click <a href = "https://deweyspizza.com/wp-content/uploads/2025/04/Deweys-Pizza-Carryout-Menu-2025.pdf">HERE</a></p>
     <p> For more info or inquires call <a href = "tel:314-555-1234">HERE</a></p>
+<br>
 
 <hr>
 <h1> Salads </h1>
@@ -145,6 +150,8 @@
     <td style="font-family: Georgia; text-align:left">All-Natural</td>
   </tr>
 </table>
+<br>
+<br>
 
 <h2> Family Salads (6-10 People) </h2>
 <table>
@@ -170,6 +177,8 @@
     <td>$35.00</td>
   </tr>
 </table>
+<br>
+<br>
 
 <h2> Party Salads (15-20 People) </h2>
 <table>
@@ -194,8 +203,9 @@
     <td>$52.20</td>
   </tr>
 </table>
-
 <br>
+<br>
+
 <hr>
 <h1> Calzone </h1>
 <table>
@@ -215,10 +225,9 @@
     <td style="font-family: Georgia; text-align:left">Refer to the <b>Toppings</b> section for additional selection. <i><b>The charge remains $2.00 per topping.</i></b></td>
   </tr>
 </table>
-
-<p></p>
-
 <br>
+<br>
+
 <hr>
 <h1> Create Your Own Pizza </h1>
  <h2> 1. Select pie size </h2>
@@ -279,6 +288,7 @@
 <p>Refer to the <b>Toppings</b> section for additional selection. Please note <b><i>there is a separate charge</i></b> based on pizza size.</p>
 
 <br>
+<br>
 <hr>
 <h1> Toppings Selection </h1>
 <h2> Pizza Toppings Charge </h2>
@@ -303,6 +313,7 @@
 
 <p><b><i>Additional toppings charge </i></b>for Dewey's Calzone is in the <b>Calzone</b> section.</p>
 
+<br>
 <h2>List of Toppings</h2>
 <style>
     @font-face {
@@ -314,86 +325,133 @@
       font-family: "Eveleth Clean Thin";
       src: url("Fonts/eveleth-clean-thin.otf") format("opentype");
     }
-
-    details {
-        font-family: "Evelth Clean Regular", sans-serif;
-        margin-bottom: 10px;
+    
+    table.toppings-table {
+      border-collapse: collapse;
+      width: 100%;
     }
-    summary {
+
+    table.toppings-table,
+    table.toppings-table tr,
+    table.toppings-table th {
+      background-color: transparent !important;
+      padding: 0;
+      margin: 0;
+    }
+
+    .toppings-table details {
+        font-family: "Evelth Clean Regular", sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .toppings-table summary {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        box-sizing: border-box;
+        
         font-family: "Evelth Clean Thin", sans-serif;       
         font-weight: bold;
         cursor: pointer;
+        border: black;
+        background-color: rgb(240, 220, 171);
+        padding: 12px;
     }
-    ul {
+
+    .toppings-table ul {
         font-family: "Evelth Clean Thin", sans-serif;
         list-style-type: disc;
-        margin-left: 20px;
+        margin: 0;
+        padding-left: 25px;
+        padding-right: 25px;
+        text-align: left;
+        line-height: 1.25;
+        background-color: transparent !important
     }
+
+  .menu-table th {
+    background-color: transparent !important;
+  }
+
 </style>
 
-<details close>
-  <summary><b>Veggies</b></summary>
-    <ul>
-      <li>Fresh Basil</li>
-      <li>Artichokes</li>
-      <li>Fresh Jalapenos</li>
-      <li>House-Pickled Jalapenos</li>
-      <li>Mushrooms</li>
-      <li>Black Olives</li>
-        <li>Green Olives</li>
-        <li>Kalamata Olives</li>
-        <li>Red Onions</li>
-        <li>White Onions</li>
-        <li>Banana Peppers</li>
-        <li>Green Bell Peppers</li>
-        <li>Roasted Red Peppers</li>
-        <li>Spinach</li>
-        <li>Tomatoes</li>
-        <li>Black Bean-Corn Salsa</li>
-        <li>Minced Garlic</li>
-        <li>Caramelized Red Onions</li>
-        <li>Roasted Cherry Tomatoes</li>
-        <li>Fresh Pineapple</li>
-    </ul>
-</details>
-<details close>
-  <summary><b>Cheeses</b></summary>
-    <ul>
-      <li>Fresh Mozzarella</li>
-      <li>Ricotta</li>
-        <li>Smoked Cheddar</li>
-        <li>Feta</li>
-        <li>Fontina</li>
-        <li>Goat Cheese</li>
-        <li>Gorgonzola</li>
-        <li>Shaved Parmesan</li>
-    </ul>
-</details>
-<details close>
-  <summary><b>Proteins</b></summary>
-    <ul>
-      <li>Bacon</li>
-      <li>Canadian Bacon</li>
-        <li>Capicola Ham</li>
-        <li>All-Natural Chicken</li>
-        <li>All-Natural Buffalo Chicken</li>
-        <li>Italian Meatballs</li>
-        <li>Pepperoni</li>
-        <li>Prosciutto</li>
-        <li>Genoa Salami</li>
-        <li>Sausage</li>
-        <li>Toasted Pine Nuts</li>
-    </ul>
-</details>
+<table class="toppings-table">
+  <tr>
+    <th>
+        <details close>
+        <summary style="background-color: rgb(240, 220, 171)"><b>Veggies</b></summary>
+            <ul>
+                <li>Fresh Basil</li>
+                <li>Artichokes</li>
+                <li>Fresh Jalapenos</li>
+                <li>House-Pickled Jalapenos</li>
+                <li>Mushrooms</li>
+                <li>Black Olives</li>
+                <li>Green Olives</li>
+                <li>Kalamata Olives</li>
+                <li>Red Onions</li>
+                <li>White Onions</li>
+                <li>Banana Peppers</li>
+                <li>Green Bell Peppers</li>
+                <li>Roasted Red Peppers</li>
+                <li>Spinach</li>
+                <li>Tomatoes</li>
+                <li>Black Bean-Corn Salsa</li>
+                <li>Minced Garlic</li>
+                <li>Caramelized Red Onions</li>
+                <li>Roasted Cherry Tomatoes</li>
+                <li>Fresh Pineapple</li>
+            </ul>
+        </details>
+    </th>
+    <th>
+        <details close>
+        <summary style="background-color: rgb(240, 220, 171)"><b>Cheeses</b></summary>
+            <ul>
+                <li>Fresh Mozzarella</li>
+                <li>Ricotta</li>
+                <li>Smoked Cheddar</li>
+                <li>Feta</li>
+                <li>Fontina</li>
+                <li>Goat Cheese</li>
+                <li>Gorgonzola</li>
+                <li>Shaved Parmesan</li>
+            </ul>
+        </details>
+    </th>
+    <th>
+        <details close>
+        <summary style="background-color: rgb(240, 220, 171)"><b>Proteins</b></summary>
+            <ul>
+                <li>Bacon</li>
+                <li>Canadian Bacon</li>
+                <li>Capicola Ham</li>
+                <li>All-Natural Chicken</li>
+                <li>All-Natural Buffalo Chicken</li>
+                <li>Italian Meatballs</li>
+                <li>Pepperoni</li>
+                <li>Prosciutto</li>
+                <li>Genoa Salami</li>
+                <li>Sausage</li>
+                <li>Toasted Pine Nuts</li>
+            </ul>
+        </details>
+    </th>
+    <th>
+        <details close>
+        <summary style="background-color: rgb(240, 220, 171)"><b>Sauces</b></summary>
+            <ul>
+                <li>BBQ Sauce</li>
+                <li>Pesto (Nut-Free)</li>
+            </ul>
+        </details>
+    </th>
+  </tr>
+</table>
 
-<details close>
-  <summary><b>Proteins</b></summary>
-    <ul>
-      <li>BBQ Sauce</li>
-      <li>Pesto (Nut-Free)</li>
-    </ul>
-</details>
-
+<br>
 <br>
 <hr>
 <h1> Specialty Pizzas </h1>
@@ -503,6 +561,7 @@
     </tr>
 </table>
 
+<br>
 <br>
 <hr>
 <h1>Desserts</h1>
