@@ -26,7 +26,8 @@
 
     table {
       border-collapse: collapse;
-      width: 100%;
+      width: 70%;
+      align-content: center;
     }
 
     td {
@@ -128,19 +129,18 @@
 <br>
 <hr>
 <br>
-<h2> Additional Links </h2>
-    <p> In case you prefer a PDF form of our menu click <a href = "https://deweyspizza.com/wp-content/uploads/2025/04/Deweys-Pizza-Carryout-Menu-2025.pdf">HERE</a></p>
-    <p> For more info or inquires call <a href = "tel:314-555-1234">HERE</a></p>
+<h1> Navigation Links </h1>
 
     <div class="navbar">
         <table class="navbar-container">
-        <th><a href="p1/1.html">Home </a></th>
-        <th><a href="p1/2.html">About Us</a></th> 
-        <th><a href="p1/3.html">Locations</a></th> 
-        <th><a href="p1/4.html">Catering</a></th> 
-        <th><a href="p1/5.html">Contact</a></th> 
-        <th><a href="p1/6.html">Careers</a></th> 
-        <th><a href="p1/16.html">Menu</a></th>
+        <th><a href="p1/1.html">Home </a></th> 
+        <th><a href="tel:314-555-1234">Contact</a></th>
+        <th><a href="p1/3.html">Salads</a></th> 
+        <th><a href="p1/4.html">Calzone</a></th>
+        <th><a href="p1/5.html">BYO Pizza</a></th> 
+        <th><a href="p1/5.html">Toppings</a></th> 
+        <th><a href="p1/5.html">Specialties</a></th>
+        <th><a href="p1/5.html">Desserts</a></th>    
         </table>
     </div>
 
@@ -153,9 +153,9 @@
 
         .navbar-container {
             margin-bottom: 20px;
-            font-size: 18px;
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 0px;
         }
 
@@ -164,8 +164,10 @@
             color: black;
             font-family: "Eveleth Clean Regular", sans-serif;
             margin: 0 10px;
-            text-align: center;
-            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
         }
 
         .navbar a:hover {
@@ -298,8 +300,28 @@
 <h1> Create Your Own Pizza </h1>
  <h2> 1. Select pie size </h2>
 
+<div class="circle-row">
+  <div class="circle-item">
+    <div class="circle-1">11"</div>
+    <p class="label-1">$11.50</p>
+  </div>
+
+  <div class="circle-item">
+    <div class="circle-2">13"</div>
+    <p class="label-2">$15.75</p>
+  </div>
+
+  <div class="circle-item">
+    <div class="circle-3">17"</div>
+    <p class="label-3">$19.50</p>
+  </div>
+</div>
+
 <style>
     .circle-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 100px;
         margin-bottom: 20px;
     }
@@ -340,26 +362,7 @@
         font-family: "Eveleth Clean Regular", sans-serif;
         font-size: 24px;
     }
-</style>
 
-<div class="circle-row">
-  <div class="circle-item">
-    <div class="circle-1">11"</div>
-    <p class="label-1">$11.50</p>
-  </div>
-
-  <div class="circle-item">
-    <div class="circle-2">13"</div>
-    <p class="label-2">$15.75</p>
-  </div>
-
-  <div class="circle-item">
-    <div class="circle-3">17"</div>
-    <p class="label-3">$19.50</p>
-  </div>
-</div>
-
-<style>
   .circle-row {
     display: flex;
     justify-content: bottom;
