@@ -5,9 +5,10 @@
         <style>
       html,
       body {
-        background-color: rgb(251, 234, 199);
-        margin: 20px;
+        max-width: 900px;
+        margin: 0 auto;
         padding: 20px;
+        background-color: rgb(251, 234, 199);
       }
 
       </style>
@@ -55,8 +56,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dewey's Pizza (University City) </title>
 
-    <p style="color: grey;"> HTML + CSS 8: Changed from table format to span format.</p>
-
+    <p style="color: grey;"> HTML + CSS 9: Fixed alignment, made the navigation bar fully functional, added a sticky scroll
 <head>
     <style>
     @font-face {
@@ -90,7 +90,7 @@
         p {
             color: rgb(0, 0, 0);
             font-family: "Georgia", serif;
-            font-size: 15px;
+            font-size: 18px;
             margin-left: 20px;
     
         }
@@ -98,14 +98,16 @@
         hr{
             border: 2px solid rgb(202, 179, 141);
             align-items: center;
-            width: 100%;
+            max-width: 900px;
         }
 
     </style>
 </head>
 
 <body>
+    <section id="home">
     <h1 style="text-align: center;font-family: Eveleth Bold, sans-serif; color: #cf0a2c; font-size: 80px"> Dewey's Pizza</h1>
+</section>
 
     <div class="image-container">
       <img src="icon-pizzawheel.svg">
@@ -128,22 +130,22 @@
     <p style="text-align: center; font-family: Eveleth Bold, sans-serif; font-size: 40px; line-height: 40px"> We Stay Serious About Pizza.</p>
     <p style="text-align: center; font-family: Georgia, sans-serif; font-size: 30px; line-height: 30px"> Without taking ourselves too seriously.</p>
 <br>
-<hr>
-<br>
-<h1> Navigation Links </h1>
 
-    <div class="navbar">
-        <table class="navbar-container">
-        <th><a href="p1/1.html">Home </a></th> 
-        <th><a href="tel:314-555-1234">Contact</a></th>
-        <th><a href="p1/3.html">Salads</a></th> 
-        <th><a href="p1/4.html">Calzone</a></th>
-        <th><a href="p1/5.html">BYO Pizza</a></th> 
-        <th><a href="p1/5.html">Toppings</a></th> 
-        <th><a href="p1/5.html">Specialties</a></th>
-        <th><a href="p1/5.html">Desserts</a></th>    
-        </table>
-    </div>
+
+
+<div class="navbar">
+     <h1>Navigation Links</h1>
+  <div class="navbar-container">
+      <a href="#home">Home</a>
+      <a href="tel:314-555-1234">Contact</a>
+      <a href="#salads">Salads</a>
+      <a href="#calzone">Calzone</a>
+      <a href="#byo-pizza">BYO Pizza</a>
+      <a href="#toppings">Toppings</a>
+      <a href="#specialties">Specialties</a>
+      <a href="#desserts">Desserts</a>
+  </div>
+</div>
 
     <style>
         @font-face {
@@ -152,23 +154,42 @@
             font-size: 18px;
         }
 
+section {
+  scroll-margin-top: 50vh; /* half of viewport height */
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    padding: 25px 0;
+    background-color: rgb(240, 220, 171);
+    z-index: 1000;
+    box-shadow: #000000 0px 4px 6px -1px, #000000 0px 2px 4px -1px;
+
+}
+
         .navbar-container {
-            margin-bottom: 20px;
+        display: block;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5px 5px;
+        font-family: "Eveleth Clean Regular", sans-serif;
+        text-align: center;
+        font-size: 13px;
+        cursor: pointer;
+        background-color: rgb(240, 220, 171);
+        box-sizing: border-box;
+
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 0px;
+            gap: 35px;
         }
 
         .navbar a {
             text-decoration: none;
             color: black;
             font-family: "Eveleth Clean Regular", sans-serif;
-            margin: 0 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 15px;
         }
 
         .navbar a:hover {
@@ -178,6 +199,7 @@
 
         
     </style>
+    <br>
     <br>
 
 <hr>
@@ -229,141 +251,93 @@ span{
   font-family: "Eveleth Clean Regular", sans-serif;
   font-size: 20px;
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
+  max-width: 1000px; 
+  margin: 0 auto;
+}
+
+.image-item {
+  text-align: left;
+}
+
+.image-item img {
+  width: 100%; 
+  height: auto; 
+  display: block;
+  border-radius: 8px; 
+}
+
+.image-item p {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #000000;
+}
 </style>
 
+<section id="salads">
 <h1> Salads </h1>
-<div class="section">
-<div class="section-name">
-    <span class="section-name">Standard (1 Person)</span>
-    <span class="blank-space"></span>
-    <span class="side-price">Side</span>
-    <span class="main-price">Entree</span>
+</section>
+
+<div class="image-grid">
+  <div class="image-item">
+    <a href="salad-house.html">
+    <img src="house.jpg" alt="House Salad">
+    </a>
+    <p>Field Greens, Toasted Pine Nuts, Dried Cranberries, Goat Cheese, Balsamic Vinnigrette</p>
+  </div>
+  <div class="image-item">
+    <a href="salad-candied-walnut.html">
+    <img src="candied-walnut.jpg" alt="Candied Walnut Salad">
+    </a>
+    <p>Candied Walnuts, Red Grapes, Gorgonzola, Citrus Basil Vinnigrette</p>
+</p>
+  </div>
+  <div class="image-item">
+    <a href="salad-peppercorn-ranch.html">
+    <img src="peppercorn-ranch.jpg" alt="Peppercorn Ranch Salad">
+    </a>
+    <p>Romaine Lettuce, Bacon, Tomatoes, Shaved Parmesan, Red Onions, Peppercorn Ranch Dresing</p>
+</p>
+  </div>
+  <div class="image-item">
+    <a href="salad-caesar.html">
+    <img src="caesar.jpg" alt="Image 4">
+    </a>
+    <p>Romaine Lettuce, Parmesan Garlic Croutons, Shaved Parmesan, Caesar Dressing</p>
+  </div>
 </div>
-<br>
 
-</div>
-
-<div class="menu">
-  <div class="menu-item">
-    <span class="item-name">House</span>
-    <span class="dots"></span>
-    <span class="side-price">$7.95</span>
-    <span class="main-price">$11.25</span>
-</div>
-
-<p>Field Greens, Toasted Pine Nuts, Dried Cranberries, Goat Cheese, Balsamic Vinnigrette</p>
-
-  <div class="menu-item">
-    <span class="item-name">Candied Walnut & Grape</span>
-    <span class="dots"></span>
-    <span class="side-price">$7.95</span>
-    <span class="main-price">$11.25</span>
-</div>
-
-<p>Field Greens, Candied Walnuts, Red Grapes, Gorgonzola, Citrus Basil Vinnigrette</p>
-
-    <div class="menu-item">
-        <span class="item-name">Peppercorn Ranch</span>
-        <span class="dots"></span>
-        <span class="side-price">$7.75</span>
-        <span class="main-price">$10.25</span>
-    </div>
-
-<p>Romaine Lettuce, Bacon, Tomatoes, Shaved Parmesan, Red Onions, Peppercorn Ranch Dresing</p>
-
-    <div class="menu-item">
-        <span class="item-name">Caesar</span>
-        <span class="dots"></span>
-        <span class="side-price">$7.75</span>
-        <span class="main-price">$10.25</span>
-    </div>
-
-<p>Romaine Lettuce, Parmesan Garlic Croutons, Shaved Parmesan, Caesar Dressing</p>
-
-    <div class="menu-item">
-        <span class="item-name">Chicken Add-On</span>
-        <span class="dots"></span>
-        <span class="side-price">$2.00</span>
-        <span class="main-price">$3.00</span>
-    </div>
-<br>
-<br>
-<br>
-<div class="section-name">
-    <span class="section-name">Family Salads (6-10 People)</span>
-    <span class="blank-space"></span>
-    <span class="main-price">Price</span>
-</div>
-<br>
-
-    <div class="menu-item">
-        <span class="item-name">House, Candied Walnut & Grape, Peppercorn Ranch</span>
-        <span class="dots"></span>
-        <span class="main-price">$36.00</span>
-    </div>
-    <br>
-    <br>
-    <div class="menu-item">
-        <span class="item-name">Caesar</span>
-        <span class="dots"></span>
-        <span class="main-price">$35.00</span>
-    </div>
-<br>
-<br>
-<br>
-
-<div class="section-name">
-    <span class="section-name">Party Salads (15-20 People)</span>
-    <span class="blank-space"></span>
-    <span class="main-price">Price</span>
-</div>
-<br>
-
-    <div class="menu-item">
-        <span class="item-name">House, Candied Walnut & Grape, Peppercorn Ranch</span>
-        <span class="dots"></span>
-        <span class="main-price">$57.50</span>
-    </div>
-    <br>
-    <br>
-    <div class="menu-item">
-        <span class="item-name">Caesar</span>
-        <span class="dots"></span>
-        <span class="main-price">$52.20</span>
-    </div>
-<br>
-<br>
+<p style="text-align: center"> Chicken Add-Ons cost <i><b>$2.00</b></i> for a <b>side</b> and <i><b>$3.00</b></i> for an <b>entree</b> </p>
 
 <hr>
+
+<section id="calzone">
 <h1> Calzone </h1>
-<div class="section-name">
-    <span class="section-name">Calzone Items</span>
-    <span class="blank-space"></span>
-    <span class="main-price">Price</span>
+</section>
+
+<div class="image-grid" style="grid-template-columns: repeat(1, 1fr)">
+  <div class="image-item">
+    <a href="calzone-items.html">
+    <img src="calzone.jpg" alt="Calzone">
+    </a>
+    <p style="text-align: center;">Includes Mozzarella and Ricotta with your choice of up to three ingredients</p>
+  </div>
 </div>
 <br>
 
-    <div class="menu-item">
-        <span class="item-name">Dewey's Calzone</span>
-        <span class="dots"></span>
-        <span class="main-price">$11.25</span>
-    </div>
-    
-    <p>Includes Mozzarella and Ricotta with your choice of up to three ingredients</p>
-    
-    <div class="menu-item">
-         <span class="item-name">Additional Toppings (per)</span>
-        <span class="dots"></span>
-        <span class="main-price">$2.00</span>
-    </div>
-
-    <p>Refer to the <b>Toppings</b> section for additional selection. <i><b>The charge remains $2.00 per topping.</i></b></p>
-<br>
-
 <hr>
+<section id="byo-pizza">
 <h1> Create Your Own Pizza </h1>
+</section>
+
  <h2> 1. Select pie size </h2>
 
+ <div class="circle-container">
 <div class="circle-row">
   <div class="circle-item">
     <div class="circle-1">11"</div>
@@ -379,6 +353,8 @@ span{
     <div class="circle-3">17"</div>
     <p class="label-3">$19.50</p>
   </div>
+</div>
+</div>
 </div>
 
 <style>
@@ -429,10 +405,9 @@ span{
 
   .circle-row {
     display: flex;
-    justify-content: bottom;
+    justify-content: center;
     align-items: center;
     gap: 100px;
-    margin-bottom: 20px;
   }
 
   .circle-item {
@@ -507,6 +482,8 @@ span{
 <br>
 <hr>
 <h1> Dietary Restrictions </h1>
+
+
 <div class="section">
 <div class="section-name">
     <span class="section-name">Accomdations</span>
@@ -531,7 +508,10 @@ span{
   
 <br>
 <hr>
+<section id="toppings">
 <h1> Toppings Selection </h1>
+</section>
+
 <div class="section">
 <div class="section-name">
     <span class="section-name">Pizza Toppings Charge</span>
@@ -701,8 +681,41 @@ span{
 <br>
 <br>
 <hr>
+<section id="specialties">
 <h1> Specialty Pizzas </h1>
+</section>
 <p>Satisfy <b>two cravings</b> with one pizza by ordering a <b>half-and-half</b> option. Available with all sizes and styles.</p>
+
+
+<div class="image-grid">
+  <div class="image-item">
+    <a href="ryans-inferno.html">
+    <img src="ryans-inferno.jpg" alt="Ryan's Inferno Pizza">
+    </a>
+    <p>Olive Oil, Mozzarella, All-Natural Buffalo Chicken, Gorgonzola, Red Onions, with Ranch and Celery after the bake</p>
+</div>
+  <div class="image-item">
+    <a href="salad-candied-walnut.html">
+    <img src="candied-walnut.jpg" alt="Candied Walnut Salad">
+    </a>
+    <p>Candied Walnuts, Red Grapes, Gorgonzola, Citrus Basil Vinnigrette</p>
+</p>
+  </div>
+  <div class="image-item">
+    <a href="salad-peppercorn-ranch.html">
+    <img src="peppercorn-ranch.jpg" alt="Peppercorn Ranch Salad">
+    </a>
+    <p>Romaine Lettuce, Bacon, Tomatoes, Shaved Parmesan, Red Onions, Peppercorn Ranch Dresing</p>
+</p>
+  </div>
+  <div class="image-item">
+    <a href="salad-caesar.html">
+    <img src="caesar.jpg" alt="Image 4">
+    </a>
+    <p>Romaine Lettuce, Parmesan Garlic Croutons, Shaved Parmesan, Caesar Dressing</p>
+  </div>
+</div>
+
 
 <div class="section">
 <div class="section-name">
@@ -721,7 +734,6 @@ span{
     <span class="main-price">21.50</span>
     <span class="main-price">25.75</span>
 </div>
-<p>Olive Oil, Mozzarella, All-Natural Buffalo Chicken, Gorgonzola, Red Onions, with Ranch and Celery after the bake</p>
 
   <div class="menu-item">
     <span class="item-name">Caprice</span>
@@ -742,7 +754,7 @@ span{
 <p>Olive Oil, Mozzarella, Green Bell Peppers, Red Onions, All-Natural Chicken, Bacon, House-Pickled Jalapenos, with Tomatoes and Ranch after the bake</p>
   
  <div class="menu-item">
-  <span class="item-name">Edgar Allen Poe</span>
+  <span class="item-name">Edgar Allan Poe</span>
     <span class="dots"></span>
     <span class="main-price">17.95</span> 
     <span class="main-price">21.95</span>
@@ -833,7 +845,9 @@ span{
 <br>
 
 <hr>
-<h1>Desserts</h1>
+<section id="desserts">
+<h1> Desserts </h1>
+</section>
 <p>All of our desserts come from local confectioners. Ask your server for the latest selections. </p>
 <p><b>The following major food allergens may be used as ingredients in this facility:</b> <i>milk, egg, fish, shellfish, tree nuts, peanuts, wheat, soy, and sesame</i>. Please speak with a team member for more infromation.</p>
 </body>

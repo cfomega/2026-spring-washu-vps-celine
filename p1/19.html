@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <style>
+      html,
+      body {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgb(251, 234, 199);
+      }
+
+      </style>
+    <head>
+  <title>Simple HTML Table</title>
+  <style>
+    @font-face {
+      font-family: "Eveleth Clean Thin";
+      src: url("Fonts/eveleth-clean-thin.otf") format("opentype");
+    }
+   
+   @font-face {
+      font-family: "Eveleth Clean Regular";
+      src: url("Fonts/eveleth-clean-regular.otf") format("opentype");
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 70%;
+      align-content: center;
+    }
+
+    td {
+      padding: 8px;
+      text-align: center;
+      font-family: "Eveleth Clean Thin", sans-serif;
+      font-size: medium;
+      width: 20%;
+      height: 50px;
+    }
+
+    th {
+      padding: 8px;
+      text-align: center;
+      background-color: rgb(240, 220, 171);
+      font-family: "Eveleth Clean Regular", sans-serif;
+      font-size: larger;
+    }
+  </style>
+</head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dewey's Pizza (University City) </title>
+
+    <p style="color: grey;"> HTML + CSS 9: Fixed alignment, made the navigation bar fully functional, added a sticky scroll
+<head>
+    <style>
+    @font-face {
+      font-family: "Eveleth Bold";
+      src: url("Fonts/eveleth-bold.otf") format("opentype");
+    }
+   
+   @font-face {
+      font-family: "Eveleth Clean Regular";
+      src: url("Fonts/eveleth-clean-regular.otf") format("opentype");
+      font-size: 18px;
+    }
+
+        h1 {
+            font-family: "Eveleth Bold", serif;
+            color: #cf0a2c;
+            font-size: 35px;
+            text-align: center;
+
+        }
+        h2{
+            font-family: "Eveleth Clean Regular", sans-serif;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            font-size: 25px;
+            text-align: left;
+            bottom: 10px;
+            top: 10px;
+            margin: 20px;
+        }
+        p {
+            color: rgb(0, 0, 0);
+            font-family: "Georgia", serif;
+            font-size: 18px;
+            margin-left: 20px;
+    
+        }
+
+        hr{
+            border: 2px solid rgb(202, 179, 141);
+            align-items: center;
+            max-width: 900px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="home">
+    <h1 style="text-align: center;font-family: Eveleth Bold, sans-serif; color: #cf0a2c; font-size: 80px"> Dewey's Pizza</h1>
+</section>
+
+    <div class="image-container">
+      <img src="icon-pizzawheel.svg">
+    </div>
+
+    <style>
+      .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          }
+
+      .image-container img {
+          width: 250px;
+          height: auto;
+          margin-bottom: 47px;
+          }
+    </style> 
+    
+    <p style="text-align: center; font-family: Eveleth Bold, sans-serif; font-size: 40px; line-height: 40px"> We Stay Serious About Pizza.</p>
+    <p style="text-align: center; font-family: Georgia, sans-serif; font-size: 30px; line-height: 30px"> Without taking ourselves too seriously.</p>
+<br>
+
+
+
+<div class="navbar">
+     <h1>Navigation Links</h1>
+  <div class="navbar-container">
+      <a href="#home">Home</a>
+      <a href="tel:314-555-1234">Contact</a>
+      <a href="#salads">Salads</a>
+      <a href="#calzone">Calzone</a>
+      <a href="#byo-pizza">BYO Pizza</a>
+      <a href="#toppings">Toppings</a>
+      <a href="#specialties">Specialties</a>
+      <a href="#desserts">Desserts</a>
+  </div>
+</div>
+
+    <style>
+        @font-face {
+            font-family: "Eveleth Clean Regular";
+            src: url("Fonts/eveleth-clean-regular.otf") format("opentype");
+            font-size: 18px;
+        }
+
+section {
+  scroll-margin-top: 50vh; /* half of viewport height */
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    padding: 25px 0;
+    background-color: rgb(240, 220, 171);
+    z-index: 1000;
+    box-shadow: #000000 0px 4px 6px -1px, #000000 0px 2px 4px -1px;
+
+}
+
+        .navbar-container {
+        display: block;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 5px 5px;
+        font-family: "Eveleth Clean Regular", sans-serif;
+        text-align: center;
+        font-size: 13px;
+        cursor: pointer;
+        background-color: rgb(240, 220, 171);
+        box-sizing: border-box;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-family: "Eveleth Clean Regular", sans-serif;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #cf0a2c;
+        }
+
+        
+    </style>
+    <br>
+    <br>
+
+<hr>
+
+<style>
+
+span{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.section-name {
+  font-family: "Eveleth Clean Regular", sans-serif;
+  font-size: 25px;
+}
+
+.menu-item {
+  display: flex;
+  line-break: 2.5px dotted #000000;
+  align-items: center;
+}
+
+.dots {
+  flex: 1;
+  border-bottom: 2.5px dotted #000000;
+  margin: 0 8px;
+}
+
+.item-name {
+  font-family: "Eveleth Clean Regular", sans-serif;
+  font-size: 20px;
+}
+
+
+.section-name {
+  display: flex;
+  line-break: 1px;
+  align-items: center;
+}
+
+.blank-space {
+  flex: 1;
+  margin: 0 8px;
+}
+
+.side-price, .main-price {
+  width: 80px;
+  text-align: center;
+  font-family: "Eveleth Clean Regular", sans-serif;
+  font-size: 20px;
+}
+</style>
+
+<section id="salads">
+<h1> Salads </h1>
+</section>
+<div class="section">
+<div class="section-name">
+    <span class="section-name">Standard (1 Person)</span>
+    <span class="blank-space"></span>
+    <span class="side-price">Side</span>
+    <span class="main-price">Entree</span>
+</div>
+<br>
+
+</div>
+
+<div class="menu">
+  <div class="menu-item">
+    <span class="item-name">House</span>
+    <span class="dots"></span>
+    <span class="side-price">$7.95</span>
+    <span class="main-price">$11.25</span>
+</div>
+
+<p>Field Greens, Toasted Pine Nuts, Dried Cranberries, Goat Cheese, Balsamic Vinnigrette</p>
+
+  <div class="menu-item">
+    <span class="item-name">Candied Walnut & Grape</span>
+    <span class="dots"></span>
+    <span class="side-price">$7.95</span>
+    <span class="main-price">$11.25</span>
+</div>
+
+<p>Field Greens, Candied Walnuts, Red Grapes, Gorgonzola, Citrus Basil Vinnigrette</p>
+
+    <div class="menu-item">
+        <span class="item-name">Peppercorn Ranch</span>
+        <span class="dots"></span>
+        <span class="side-price">$7.75</span>
+        <span class="main-price">$10.25</span>
+    </div>
+
+<p>Romaine Lettuce, Bacon, Tomatoes, Shaved Parmesan, Red Onions, Peppercorn Ranch Dresing</p>
+
+    <div class="menu-item">
+        <span class="item-name">Caesar</span>
+        <span class="dots"></span>
+        <span class="side-price">$7.75</span>
+        <span class="main-price">$10.25</span>
+    </div>
+
+<p>Romaine Lettuce, Parmesan Garlic Croutons, Shaved Parmesan, Caesar Dressing</p>
+
+    <div class="menu-item">
+        <span class="item-name">Chicken Add-On</span>
+        <span class="dots"></span>
+        <span class="side-price">$2.00</span>
+        <span class="main-price">$3.00</span>
+    </div>
+<br>
+<br>
+<br>
+<div class="section-name">
+    <span class="section-name">Family Salads (6-10 People)</span>
+    <span class="blank-space"></span>
+    <span class="main-price">Price</span>
+</div>
+<br>
+
+    <div class="menu-item">
+        <span class="item-name">House, Candied Walnut & Grape, Peppercorn Ranch</span>
+        <span class="dots"></span>
+        <span class="main-price">$36.00</span>
+    </div>
+    <br>
+    <br>
+    <div class="menu-item">
+        <span class="item-name">Caesar</span>
+        <span class="dots"></span>
+        <span class="main-price">$35.00</span>
+    </div>
+<br>
+<br>
+<br>
+
+<div class="section-name">
+    <span class="section-name">Party Salads (15-20 People)</span>
+    <span class="blank-space"></span>
+    <span class="main-price">Price</span>
+</div>
+<br>
+
+    <div class="menu-item">
+        <span class="item-name">House, Candied Walnut & Grape, Peppercorn Ranch</span>
+        <span class="dots"></span>
+        <span class="main-price">$57.50</span>
+    </div>
+    <br>
+    <br>
+    <div class="menu-item">
+        <span class="item-name">Caesar</span>
+        <span class="dots"></span>
+        <span class="main-price">$52.20</span>
+    </div>
+<br>
+<br>
+
+<hr>
+
+<section id="calzone">
+<h1> Calzone </h1>
+</section>
+<div class="section-name">
+    <span class="section-name">Calzone Items</span>
+    <span class="blank-space"></span>
+    <span class="main-price">Price</span>
+</div>
+<br>
+
+    <div class="menu-item">
+        <span class="item-name">Dewey's Calzone</span>
+        <span class="dots"></span>
+        <span class="main-price">$11.25</span>
+    </div>
+    
+    <p>Includes Mozzarella and Ricotta with your choice of up to three ingredients</p>
+    
+    <div class="menu-item">
+         <span class="item-name">Additional Toppings (per)</span>
+        <span class="dots"></span>
+        <span class="main-price">$2.00</span>
+    </div>
+
+    <p>Refer to the <b>Toppings</b> section for additional selection. <i><b>The charge remains $2.00 per topping.</i></b></p>
+<br>
+
+<hr>
+<section id="byo-pizza">
+<h1> Create Your Own Pizza </h1>
+</section>
+
+ <h2> 1. Select pie size </h2>
+
+ <div class="circle-container">
+<div class="circle-row">
+  <div class="circle-item">
+    <div class="circle-1">11"</div>
+    <p class="label-1">$11.50</p>
+  </div>
+
+  <div class="circle-item">
+    <div class="circle-2">13"</div>
+    <p class="label-2">$15.75</p>
+  </div>
+
+  <div class="circle-item">
+    <div class="circle-3">17"</div>
+    <p class="label-3">$19.50</p>
+  </div>
+</div>
+</div>
+</div>
+
+<style>
+    .circle-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        margin-bottom: 20px;
+    }
+
+    .circle-1{
+        width: 130px;
+        height: 130px;
+        background-color: rgb(240, 220, 171);
+        border: 2px solid black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Eveleth Clean Regular", sans-serif;
+        font-size: 24px;
+    }
+    .circle-2{
+        width: 160px;
+        height: 160px;
+        background-color: rgb(240, 220, 171);
+        border: 2px solid black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Eveleth Clean Regular", sans-serif;
+        font-size: 24px;
+    }
+    .circle-3{
+        width: 190px;
+        height: 190px;
+        background-color: rgb(240, 220, 171);
+        border: 2px solid black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Eveleth Clean Regular", sans-serif;
+        font-size: 24px;
+    }
+
+  .circle-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .circle-item {
+    text-align: center;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(240, 220, 171);
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Eveleth Clean Regular", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+
+  .label-1 {
+    font-family: "Eveleth Clean Thin", sans-serif;
+    font-size: 18px;
+    margin-top: 18px;
+  }
+
+  .label-2 {
+    font-family: "Eveleth Clean Thin", sans-serif;
+    font-size: 18px;
+    margin-top: 18px;
+  }
+
+  .label-3 {
+    font-family: "Eveleth Clean Thin", sans-serif;
+    font-size: 18px;
+    margin-top: 18px;
+  }
+</style>
+
+<br>
+
+<div class="section">
+<div class="section-name">
+    <span class="section-name">2. Base Type</span>
+    <span class="blank-space"></span>
+    <span class="main-price">Price</span>
+</div>
+<br>
+
+  <div class="menu-item">
+    <span class="item-name">Red Sauce</span>
+    <span class="dots"></span>
+    <span class="main-price">Free</span>
+</div>
+  <p>Red Sauce and Mozzarella</p>
+  
+<div class="menu-item">
+    <span class="item-name">White Sauce</span>
+    <span class="dots"></span>
+    <span class="main-price">Free</span>
+</div>
+ <p>Olive Oil, Minced Garlic, Mozzarella, and Fontina</p>
+
+
+<br>
+<h2> 3. Toppings </h2>
+<p>Refer to the <b>Toppings</b> section for additional selection. Please note <b><i>there is a separate charge</i></b> based on pizza size.</p>
+
+
+<br>
+<br>
+<hr>
+<h1> Dietary Restrictions </h1>
+
+
+<div class="section">
+<div class="section-name">
+    <span class="section-name">Accomdations</span>
+    <span class="blank-space"></span>
+    <span class="main-price">Price</span>
+</div>
+<br>
+
+  <div class="menu-item">
+    <span class="item-name">12" Gluten-Free Crust</span>
+    <span class="dots"></span>
+    <span class="main-price">$11.25</span>
+</div>
+  <p>*Gluten-Free Crust: 12" size that accomodates for gluten allergens </p>
+  
+<div class="menu-item">
+    <span class="item-name">Dairy-Free Cheese</span>
+    <span class="dots"></span>
+    <span class="main-price">$2.00</span>
+</div>
+  <p>*Dairy-Free Cheese: An additional charge that is available with any size, sauce, and toppings</p>
+  
+<br>
+<hr>
+<section id="toppings">
+<h1> Toppings Selection </h1>
+</section>
+
+<div class="section">
+<div class="section-name">
+    <span class="section-name">Pizza Toppings Charge</span>
+    <span class="blank-space"></span>
+    <span class="main-price">Price</span>
+</div>
+<br>
+
+  <div class="menu-item">
+    <span class="item-name">11" Base</span>
+    <span class="dots"></span>
+    <span class="main-price">2.60</span>
+</div>
+  <br>
+<div class="menu-item">
+    <span class="item-name">13" Base</span>
+    <span class="dots"></span>
+    <span class="main-price">2.80</span>
+</div>
+  <br>
+<div class="menu-item">
+    <span class="item-name">17" Base</span>
+    <span class="dots"></span>
+    <span class="main-price">3.30</span>
+</div>
+
+
+<p><b><i>Additional toppings charge </i></b>for Dewey's Calzone is in the <b>Calzone</b> section.</p>
+
+<br>
+<h2>List of Toppings</h2>
+<br>
+<style>
+    @font-face {
+      font-family: "Eveleth Clean Regular";
+      src: url("Fonts/eveleth-clean-regular.otf") format("opentype");
+    }
+
+    @font-face {
+      font-family: "Eveleth Clean Thin";
+      src: url("Fonts/eveleth-clean-thin.otf") format("opentype");
+      font-size: 16px;
+    }
+    
+    .toppings-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        align-items: baseline;
+    }
+
+    .topping-column {
+        flex: 1 1 200px; /*supposedly a shrinking function when one is opened*/
+        background-color: transparent;
+    }
+
+    .topping-column details {
+        font-family: "Eveleth Clean Regular", sans-serif;
+        margin: 0;
+        padding: 0;
+        border: 1px solid black;
+}
+
+    .topping-column summary {
+        display: block;
+        width: 100%;
+        padding: 12px 15px;
+        font-family: "Eveleth Clean Regular", sans-serif;
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: rgb(240, 220, 171);
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .topping-column ul {
+        font-family: "Eveleth Clean Thin", sans-serif;
+        list-style-type: disc;
+        margin: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-align: left;
+        line-height: 1.3;
+        background-color: transparent;
+    }
+</style>
+
+<div class="toppings-container">
+    <div class="topping-column">
+        <details close>
+        <summary><b>Veggies</b></summary>
+            <ul>
+                <li>Fresh Basil</li>
+                <li>Artichokes</li>
+                <li>Fresh Jalapenos</li>
+                <li>House-Pickled Jalapenos</li>
+                <li>Mushrooms</li>
+                <li>Black Olives</li>
+                <li>Green Olives</li>
+                <li>Kalamata Olives</li>
+                <li>Red Onions</li>
+                <li>White Onions</li>
+                <li>Banana Peppers</li>
+                <li>Green Bell Peppers</li>
+                <li>Roasted Red Peppers</li>
+                <li>Spinach</li>
+                <li>Tomatoes</li>
+                <li>Black Bean-Corn Salsa</li>
+                <li>Minced Garlic</li>
+                <li>Caramelized Red Onions</li>
+                <li>Roasted Cherry Tomatoes</li>
+                <li>Fresh Pineapple</li>
+            </ul>
+        </details>
+    </div>
+    <div class="topping-column">
+        <details close>
+        <summary><b>Cheeses</b></summary>
+            <ul>
+                <li>Fresh Mozzarella</li>
+                <li>Ricotta</li>
+                <li>Smoked Cheddar</li>
+                <li>Feta</li>
+                <li>Fontina</li>
+                <li>Goat Cheese</li>
+                <li>Gorgonzola</li>
+                <li>Shaved Parmesan</li>
+            </ul>
+        </details>
+    </div>
+    <div class="topping-column">
+        <details close>
+        <summary style><b>Proteins</b></summary>
+            <ul>
+                <li>Bacon</li>
+                <li>Canadian Bacon</li>
+                <li>Capicola Ham</li>
+                <li>All-Natural Chicken</li>
+                <li>All-Natural Buffalo Chicken</li>
+                <li>Italian Meatballs</li>
+                <li>Pepperoni</li>
+                <li>Prosciutto</li>
+                <li>Genoa Salami</li>
+                <li>Sausage</li>
+                <li>Toasted Pine Nuts</li>
+            </ul>
+        </details>
+    </div>
+    <div class="topping-column">
+        <details close>
+        <summary><b>Sauces</b></summary>
+            <ul>
+                <li>BBQ Sauce</li>
+                <li>Pesto (Nut-Free)</li>
+            </ul>
+        </details>
+    </div>
+</div>
+<br>
+<p>Click on any of the topping categories above to expand the list of options.</p>
+
+<br>
+<br>
+<hr>
+<section id="specialties">
+<h1> Specialty Pizzas </h1>
+</section>
+<p>Satisfy <b>two cravings</b> with one pizza by ordering a <b>half-and-half</b> option. Available with all sizes and styles.</p>
+
+<div class="section">
+<div class="section-name">
+    <span class="section-name">Pizza Size</span>
+    <span class="blank-space"></span>
+    <span class="main-price">11"</span>
+    <span class="main-price">13"</span>
+    <span class="main-price">17"</span>
+</div>
+<br>
+
+  <div class="menu-item">
+    <span class="item-name">Ryan's Inferno</span>
+    <span class="dots"></span>
+    <span class="main-price">17.75</span>
+    <span class="main-price">21.50</span>
+    <span class="main-price">25.75</span>
+</div>
+<p>Olive Oil, Mozzarella, All-Natural Buffalo Chicken, Gorgonzola, Red Onions, with Ranch and Celery after the bake</p>
+
+  <div class="menu-item">
+    <span class="item-name">Caprice</span>
+    <span class="dots"></span>
+    <span class="main-price">17.95</span>
+    <span class="main-price">21.95</span>
+    <span class="main-price">26.25</span>
+</div>
+<p>Olive Oil, Minced Garlic, Fontina, Fresh Basil, Fresh Mozzarella, Roasted Cherry Tomatoes</p>
+
+  <div class="menu-item">
+    <span class="item-name">Dr. Dre</span>
+    <span class="dots"></span>
+    <span class="main-price">17.95</span>
+    <span class="main-price">21.95</span>
+    <span class="main-price">26.25</span>
+</div>
+<p>Olive Oil, Mozzarella, Green Bell Peppers, Red Onions, All-Natural Chicken, Bacon, House-Pickled Jalapenos, with Tomatoes and Ranch after the bake</p>
+  
+ <div class="menu-item">
+  <span class="item-name">Edgar Allen Poe</span>
+    <span class="dots"></span>
+    <span class="main-price">17.95</span> 
+    <span class="main-price">21.95</span>
+    <span class="main-price">26.25</span>
+    </div>
+    <p>Olive Oil, Mozzarella, Fontina, Mushrooms, Whole Roasted Garlic, Kalamata Olives, Goat Cheese, with Tomatoes and Parsley after the bake</p>
+
+  <div class="menu-item">
+         <span class="item-name">Socrates' Revenge</span>
+        <span class="dots"></span>
+        <span class="main-price">17.95</span>
+        <span class="main-price">21.95</span>
+        <span class="main-price">26.25</span>
+    </div>
+        <p>Olive Oil, Minced Garlic, Mozzarella, Fontina, Spinach, Black Olives, Green Olives, Feta, Red Onions, Tomatoes</p>
+        
+    <div class="menu-item">
+         <span class="item-name">Southwest BBQ Chicken</span>
+        <span class="dots"></span>
+        <span class="main-price">17.95</span>
+        <span class="main-price">21.95</span>
+        <span class="main-price">26.25</span>
+    </div>
+    <p>Olive Oil, Smoked Cheddar, Mozzarella, Black Bean-Corn Salsa, All-Natural Chicken, Roasted Red Peppers, BBQ Sauce</p>
+  
+    <div class="menu-item">
+         <span class="item-name">Porky Fig</span>
+        <span class="dots"></span>
+        <span class="main-price">17.75</span>
+        <span class="main-price">21.50</span>
+        <span class="main-price">25.75</span>
+    </div>
+    <p>Fig Jam, Mozzarella, Fontina, Prosciutto, Caramelized Red Onions, Gorgonzola</p>
+ 
+      <div class="menu-item">
+          <span class="item-name">Don Corleone</span>
+        <span class="dots"></span>
+        <span class="main-price">17.95</span>
+        <span class="main-price">21.95</span>
+        <span class="main-price">26.25</span>
+    </div>
+    <p>Red Sauce, Mozzarella, Pepperoni, Genoa Salami, Capicola Ham, Oregeno</p>
+
+    <div class="menu-item">
+         <span class="item-name">Green Lantern</span>
+        <span class="dots"></span>
+        <span class="main-price">17.95</span>
+        <span class="main-price">21.95</span>
+        <span class="main-price">26.25</span>
+    </div>
+    <p>Red Sauce, Mozzarella, Minced Garlic, Mushrooms, Goat Cheese, Artichokes, Pesto</p>
+
+      <div class="menu-item">
+            <span class="item-name">Bronx Bomber</span>
+        <span class="dots"></span>
+        <span class="main-price">17.95</span>
+        <span class="main-price">21.95</span>
+        <span class="main-price">26.25</span>
+    </div>
+    <p>Red Sauce, Mozarella, Pepperoni, Sausage, Mushrooms, White Onions, Green Bell Peppers, Black Olives</p>
+
+      <div class="menu-item">
+         <span class="item-name">Killer Veggie</span>
+        <span class="dots"></span>
+        <span class="main-price">17.75</span>
+        <span class="main-price">21.50</span>
+        <span class="main-price">25.75</span>
+    </div>
+    <p>Red Sauce, Mozzarella, Mushrooms, White Onions, Black Olives, Green Bell Peppers, with Tomatoes and Parsley after the bake</p>
+
+    <div class="menu-item">
+         <span class="item-name">Meatball</span>
+        <span class="dots"></span>
+        <span class="main-price">17.95</span>
+        <span class="main-price">21.50</span>
+        <span class="main-price">25.75</span>
+    </div>
+    <p>Red Sauce, Fresh Basil, Fresh Mozzarella, Italian Meatballs, Oregeno, Shaved Parmesan</p>
+
+    <div class="menu-item">
+         <span class="item-name">Hawaiian</span>
+        <span class="dots"></span>
+        <span class="main-price">16.50</span>
+        <span class="main-price">21.25</span>
+        <span class="main-price">25.50</span>
+    </div>
+    <p>Red Sauce, Mozzarella, Canadian Bacon, Fresh Pineapple</p>
+<br>
+
+<hr>
+<section id="desserts">
+<h1> Desserts </h1>
+</section>
+<p>All of our desserts come from local confectioners. Ask your server for the latest selections. </p>
+<p><b>The following major food allergens may be used as ingredients in this facility:</b> <i>milk, egg, fish, shellfish, tree nuts, peanuts, wheat, soy, and sesame</i>. Please speak with a team member for more infromation.</p>
+</body>
+</html>
