@@ -2,63 +2,10 @@
 <html lang="en">
 <head>
 
-        <style>
-      html,
-      body {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: rgb(251, 234, 199);
-      }
-
-      </style>
-    <head>
-  <title>Simple HTML Table</title>
-  <style>
-    @font-face {
-      font-family: "Eveleth Clean Thin";
-      src: url("Fonts/eveleth-clean-thin.otf") format("opentype");
-    }
-   
-   @font-face {
-      font-family: "Eveleth Clean Regular";
-      src: url("Fonts/eveleth-clean-regular.otf") format("opentype");
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 70%;
-      align-content: center;
-    }
-
-    td {
-      padding: 8px;
-      text-align: center;
-      font-family: "Eveleth Clean Thin", sans-serif;
-      font-size: medium;
-      width: 20%;
-      height: 50px;
-    }
-
-    th {
-      padding: 8px;
-      text-align: center;
-      background-color: rgb(240, 220, 171);
-      font-family: "Eveleth Clean Regular", sans-serif;
-      font-size: larger;
-    }
-  </style>
-</head>
-
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dewey's Pizza (University City) </title>
 
-    <p style="color: grey;"> HTML + CSS 10: Pt. 1 - Changed format of salads, calzone, and specialties for image redirects, Pt. 2 - Added animations when hovering over menu items.
-<head>
-
+  <title>Dewey's Pizza (University City) </title>
   <link rel="icon" type="image/png" href="deweys-logo.png">
 
 <meta property="og:type" content="website">
@@ -68,10 +15,6 @@
 <meta property="og:image" content="deweys-logo.jpg">
 
 <meta property="og:description" content="The VPS 2026 Dewey's Pizza Menu is a design project by Celine Omega to practice the application of markup, HTML, CSS, Javascript, and design principles. The menu features a variety of pizzas, salads, calzones, and desserts, with a focus on the modern and customizable atmosphere of the St. Louis restaurant, Dewey's Pizza located in University City.">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://vps2026-deweys-pizza-menu/index.html">
-<meta name="twitter:title" content="Dewey's Pizza Menu">
 
     <style>
     @font-face {
@@ -116,10 +59,53 @@
             max-width: 900px;
         }
 
+      html,
+      body {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgb(251, 234, 199);
+      }
+
+    @font-face {
+      font-family: "Eveleth Clean Thin";
+      src: url("Fonts/eveleth-clean-thin.otf") format("opentype");
+    }
+   
+   @font-face {
+      font-family: "Eveleth Clean Regular";
+      src: url("Fonts/eveleth-clean-regular.otf") format("opentype");
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 70%;
+      align-content: center;
+    }
+
+    td {
+      padding: 8px;
+      text-align: center;
+      font-family: "Eveleth Clean Thin", sans-serif;
+      font-size: medium;
+      width: 20%;
+      height: 50px;
+    }
+
+    th {
+      padding: 8px;
+      text-align: center;
+      background-color: rgb(240, 220, 171);
+      font-family: "Eveleth Clean Regular", sans-serif;
+      font-size: larger;
+    }
+
     </style>
 </head>
 
 <body>
+      <p style="color: grey;"> HTML + CSS 10: Pt. 1 - Changed format of salads, calzone, and specialties for image redirects, Pt. 2 - Added animations when hovering over menu items.
+
     <section id="home">
     <h1 style="text-align: center;font-family: Eveleth Bold, sans-serif; color: #cf0a2c; font-size: 80px"> Dewey's Pizza</h1>
 </section>
@@ -270,13 +256,22 @@ span{
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
+  text-align: left;
   gap: 20px; 
   max-width: 1000px; 
   margin: 0 auto;
 }
 
+.label-grid h2, p{
+  text-align: left;
+  position: relative;
+  max-width: 1000px; 
+  margin-left: 0;
+}
+
 .image-item {
   text-align: left;
+  position: relative
 }
 
 .image-item img {
@@ -292,6 +287,36 @@ span{
   font-size: 16px;
   color: #000000;
 }
+
+.image-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Eveleth Clean Regular", sans-serif;
+  font-size: 22px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.image-item:hover .overlay {
+  opacity: 0.8;
+}
+
+.img link{
+  display: block;
+  position: relative;
+}
+
 </style>
 
 <section id="salads">
@@ -300,35 +325,52 @@ span{
 
 <div class="image-grid">
   <div class="image-item">
-    <a href="salad-house.html">
+    <a href="salad-house.html" class="img-link">
     <img src="house.jpg" alt="House Salad">
+    <div class="overlay">View for Pricing Details</div>
     </a>
+      </div>
+
+  <div class="image-item">
+    <a href="salad-candied-walnut.html" class="img-link">
+    <img src="candied-walnut.jpg" alt="Candied Walnut Salad">
+     <div class="overlay">View for Pricing Details</div>
+    </a>
+    </div>
+
+  <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">House</h2>
     <p>Field Greens, Toasted Pine Nuts, Dried Cranberries, Goat Cheese, Balsamic Vinnigrette</p>
   </div>
-  <div class="image-item">
-    <a href="salad-candied-walnut.html">
-    <img src="candied-walnut.jpg" alt="Candied Walnut Salad">
-    </a>
+
+  <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Candied Walnut & Grape</h2>
-    <p>Candied Walnuts, Red Grapes, Gorgonzola, Citrus Basil Vinnigrette</p>
-</p>
+    <p>Field Greens, Candied Walnuts, Red Grapes, Gorgonzola, Citrus Basil Vinnigrette</p>
   </div>
+
   <div class="image-item">
-    <a href="salad-peppercorn-ranch.html">
+    <a href="salad-peppercorn-ranch.html" class="img-link">
     <img src="peppercorn-ranch.jpg" alt="Peppercorn Ranch Salad">
+    <div class="overlay">View for Pricing Details</div>
     </a>
+    </div>
+
+  <div class="image-item">
+    <a href="salad-caesar.html" class="img-link">
+    <img src="caesar.jpg" alt="Caesar Salad">
+    <div class="overlay">View for Pricing Details</div>
+    </a>
+    </div>
+
+  <div class ="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Peppercorn Ranch</h2>
     <p>Romaine Lettuce, Bacon, Tomatoes, Shaved Parmesan, Red Onions, Peppercorn Ranch Dresing</p>
-</p>
   </div>
-  <div class="image-item">
-    <a href="salad-caesar.html">
-    <img src="caesar.jpg" alt="Image 4">
-    </a>
+
+  <div class ="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Caesar</h2>
     <p>Romaine Lettuce, Parmesan Garlic Croutons, Shaved Parmesan, Caesar Dressing</p>
-  </div>
+</div>
 </div>
 
 <p style="text-align: center"> Chicken Add-Ons cost <i><b>$2.00</b></i> for a <b>side</b> and <i><b>$3.00</b></i> for an <b>entree</b> </p>
@@ -341,11 +383,16 @@ span{
 
 <div class="image-grid" style="grid-template-columns: repeat(1, 1fr)">
   <div class="image-item">
-    <a href="calzone-items.html">
+    <a href="calzone-items.html" class ="img-link">
     <img src="calzone.jpg" alt="Calzone">
+    <div class="overlay">View for Pricing Details</div>
     </a>
+    </div>
+
+    <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Dewey's Calzone</h2>
     <p style="text-align: left;">Includes Mozzarella and Ricotta with your choice of up to three ingredients</p>
+  </div>
   </div>
 </div>
 <br>
@@ -721,106 +768,164 @@ span{
 
 <div class="image-grid" style="grid-template-columns: repeat(3, 1fr)">
   <div class="image-item">
-    <a href="ryans-inferno.html">
+    <a href="ryans-inferno.html" class="img-link">
     <img src="ryans-inferno.jpg" alt="Ryan's Inferno Pizza">
+        <div class="overlay">View for Pricing Details</div>
     </a>
+    </div>
+
+  <div class="image-item">
+    <a href="caprice.html" class="img-link">
+    <img src="caprice.jpg" alt="Caprice Pizza">
+      <div class="overlay">View for Pricing Details</div>
+  </a>
+  </div>
+
+  <div class="image-item">
+    <a href="dr-dre.html" class="img-link">
+    <img src="dr-dre.jpg" alt="Dr. Dre Pizza">
+    <div class="overlay">View for Pricing Details</div>
+    </a>
+    </div>
+
+  <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Ryan's Inferno</h2>
     <p>Olive Oil, Mozzarella, All-Natural Buffalo Chicken, Gorgonzola, Red Onions, with Ranch and Celery after the bake</p>
 </div>
 
-  <div class="image-item">
-    <a href="caprice.html">
-    <img src="caprice.jpg" alt="Caprice Pizza">
-    </a>
+<div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Caprice</h2>
     <p>Olive Oil, Minced Garlic, Fontina, Fresh Basil, Fresh Mozzarella, Roasted Cherry Tomatoes</p>
   </div>
 
-  <div class="image-item">
-    <a href="dr-dre.html">
-    <img src="dr-dre.jpg" alt="Dr. Dre Pizza">
-    </a>
+  <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Dr. Dre</h2>
     <p>Olive Oil, Mozzarella, Green Bell Peppers, Red Onions, All-Natural Chicken, Bacon, House-Pickled Jalapenos, with Tomatoes and Ranch after the bake</p>
-  </div>
+</div>
 
   <div class="image-item">
-    <a href="edgar-allan.html">
+    <a href="edgar-allan.html" class="img-link">
     <img src="edgar-allan.jpg" alt="Edgar Allan Poe Pizza">
+    <div class="overlay">View for Pricing Details</div>
     </a>
+  </div>
+
+    <div class="image-item">
+    <a href="socrates-revenge.html" class="img-link">
+    <img src="socrates-revenge.jpg" alt="Socrates' Revenge Pizza">
+    <div class="overlay">View for Pricing Details</div>
+    </a>
+    </div>
+
+    <div class="image-item">
+    <a href="southwest-bbq.html" class="img-link">
+    <img src="southwest-bbq.jpg" alt="Southwest BBQ Chicken Pizza">
+    <div class="overlay">View for Pricing Details</div>
+    </a>
+    </div>
+
+    <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Edgar Allan Poe</h2>
      <p>Olive Oil, Mozzarella, Fontina, Mushrooms, Whole Roasted Garlic, Kalamata Olives, Goat Cheese, with Tomatoes and Parsley after the bake</p>
 </div>
 
-  <div class="image-item">
-    <a href="socrates-revenge.html">
-    <img src="socrates-revenge.jpg" alt="Socrates' Revenge Pizza">
-    </a>
+<div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Socrates' Revenge</h2>
      <p>Olive Oil, Minced Garlic, Mozzarella, Fontina, Spinach, Black Olives, Green Olives, Feta, Red Onions, Tomatoes</p>
         
 </div>
 
-  <div class="image-item">
-    <a href="southwest-bbq.html">
-    <img src="southwest-bbq.jpg" alt="Southwest BBQ Chicken Pizza">
-    </a>
+<div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Southwest BBQ Chicken</h2>
  <p>Olive Oil, Smoked Cheddar, Mozzarella, Black Bean-Corn Salsa, All-Natural Chicken, Roasted Red Peppers, BBQ Sauce</p>
   </div>
 
   <div class="image-item">
-    <a href="porky-fig.html">
+    <a href="porky-fig.html" class="img-link">
     <img src="porky-fig.jpg" alt="Porky Fig Pizza">
+    <div class="overlay">View for Pricing Details</div>
     </a>
+    </div>
+
+    <div class="image-item">
+    <a href="don-corleone.html" class="img-link">
+    <img src="don-corleone.jpg" alt="Don Corleone Pizza">
+    <div class="overlay">View for Pricing Details</div>
+    </a>
+    </div>
+
+  <div class="image-item">
+    <a href="green-lantern.html" class="img-link">
+    <img src="green-lantern.jpg" alt="Green Lantern Pizza">
+    <div class="overlay">View for Pricing Details</div>
+    </a>
+    </div>
+
+    <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Porky Fig</h2>
     <p>Fig Jam, Mozzarella, Fontina, Prosciutto, Caramelized Red Onions, Gorgonzola</p>
 </div>
 
-  <div class="image-item">
-    <a href="don-corleone.html">
-    <img src="don-corleone.jpg" alt="Don Corleone Pizza">
-    </a>
+    <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Don Corleone</h2>
     <p>Red Sauce, Mozzarella, Pepperoni, Genoa Salami, Capicola Ham, Oregeno</p>
 </div>
 
-  <div class="image-item">
-    <a href="green-lantern.html">
-    <img src="green-lantern.jpg" alt="Green Lantern Pizza">
-    </a>
+    <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Green Lantern</h2>
     <p>Red Sauce, Mozzarella, Minced Garlic, Mushrooms, Goat Cheese, Artichokes, Pesto</p>
 </div>
 
   <div class="image-item">
-    <a href="bronx-bomber.html">
+    <a href="bronx-bomber.html" class="img-link">
     <img src="bronx-bomber.jpg" alt="Bronx Bomber Pizza">
+    <div class="overlay">View for Pricing Details</div>
     </a>
+  </div>
+
+  <div class="image-item">
+    <a href="killer-veggie.html" class="img-link">
+    <img src="killer-veggie.jpg" alt="Killer Veggie Pizza">
+    <div class="overlay">View for Pricing Details</div>
+    </a>
+    </div>
+
+      <div class="image-item">
+    <a href="meatball.html" class="img-link">
+    <img src="meatball.jpg" alt="Meatball Pizza">
+    <div class="overlay">View for Pricing Details</div>
+    </a>
+    </div>
+
+  <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Bronx Bomber</h2>
     <p>Red Sauce, Mozarella, Pepperoni, Sausage, Mushrooms, White Onions, Green Bell Peppers, Black Olives</p>
 </div>
 
-  <div class="image-item">
-    <a href="killer-veggie.html">
-    <img src="killer-veggie.jpg" alt="Killer Veggie Pizza">
-    </a>
+   <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Killer Veggie</h2>
     <p>Red Sauce, Mozzarella, Mushrooms, White Onions, Black Olives, Green Bell Peppers, with Tomatoes and Parsley after the bake</p>
 </div>
 
-  <div class="image-item">
-    <a href="meatball.html">
-    <img src="meatball.jpg" alt="Meatball Pizza">
-    </a>
+       <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Meatball</h2>
     <p>Red Sauce, Fresh Basil, Fresh Mozzarella, Italian Meatballs, Oregeno, Shaved Parmesan</p>
 </div>
 
   <div class="image-item">
-    <a href="hawaiian.html">
+    <a href="hawaiian.html" class="img-link">
     <img src="hawaiian.jpg" alt="Hawaiian Pizza">
+    <div class="overlay">View for Pricing Details</div>
     </a>
+    </div>
+
+      <div class="image-item">
+    </div>
+
+      <div class="image-item">
+    </div>
+
+    <div class="label-grid">
     <h2 style="margin: 0; margin-top: 20px;">Hawaiian</h2>
     <p>Red Sauce, Mozzarella, Canadian Bacon, Fresh Pineapple</p>
 </div>
@@ -833,5 +938,58 @@ span{
 </section>
 <p>All of our desserts come from local confectioners. Ask your server for the latest selections. </p>
 <p><b>The following major food allergens may be used as ingredients in this facility:</b> <i>milk, egg, fish, shellfish, tree nuts, peanuts, wheat, soy, and sesame</i>. Please speak with a team member for more infromation.</p>
+<hr>
+<br>
+
+<style>
+  .footer{
+        width: 100%;
+        height: 300px;
+        background-color: rgb(240, 220, 171);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Eveleth Clean Regular", sans-serif;
+        font-size: 24px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-content: center;
+    gap: 20px; 
+    max-width: 1000px; 
+    gap: 30px;
+  }
+
+  .footer-text{
+    margin-left:0;
+    font-size: 20px;
+  }
+</style>
+
+<br>
+<div class="footer">
+  <div class="footer-grid">
+  <div class="footer-text" style="justify-content: center">
+    <img src="deweys-pizza-logo-horizontal.png" alt="Dewey's Logo" style="height:100px">
+    <p>For more information check out our official website <a href="https://deweyspizza.com/">here</a> </p>
+  </div>
+
+  <div class="footer-text">
+    <p>
+      <b>Contact:</b> <a href="tel:314-555-1234">tel:314-555-1234</a><br>
+      <b>Address: 559 North and South Road University City, Missouri 63130<br>
+      
+      
+      Monday - Thursday 11:00 am - 9:00 pm
+      Friday - Saturday 11:00 am - 10:00 pm
+      Sunday 4:00 pm - 9:00 pm
+      <a href="https://www.instagram.com/deweyspizza/">Instagram</a>|<a href="https://x.com/DeweysPizza">Twitter</a>|<a href="https://www.linkedin.com/company/dewey's-pizza/">LinkedIn</a>|<a href="https://www.youtube.com/deweyspizzarestaurant">YouTube</a>
+    </p>
+  </div>
+</div>
+</div>
+  
 </body>
 </html>
