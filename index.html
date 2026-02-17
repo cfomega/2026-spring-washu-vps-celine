@@ -6,27 +6,79 @@
     <title>Celine's Class Website, Spring 2026 at WashU</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
+<style>
+    @font-face {
+      font-family: "Stitch";
+      src: url("Fonts/Kawaii\ Stitch.otf") format("opentype");
+    }
+
+     @font-face {
+      font-family: "Eveleth Bold";
+      src: url("Fonts/eveleth-bold.otf") format("opentype");
+    }
+
+    body{
+        background-color: #ecbcb4;
+    }
+
+    h1{
+        font-family: "Stitch";
+        color: #9C446C;
+    }
+
+    .grid{
+        display:flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 5px;
+            flex-wrap: wrap;
+    }
+
+    main{
+        width: 100%;
+        height:auto;
+        background-color: #bbad7b;
+        border: 6px double #625933;
+        color: #3d3028;
+        margin: 3%;
+
+        padding: 5%;
+    }
+
+</style>
+
 <body>
+
+
     <h1>Celine's Class Website</h1>
-    <p>Welcome to my class website!</p>
-    <hr>
-    <h2>Exercises</h2>
+
+    <div class="grid">
+        <main>
+            
     <ul>
         <li><a href="exercises/profile-card.html">Profile Card</a></li>
         <li><a href="exercises/collection-of-things/index.html">Collection of Things</a></li>
-    </ul>
-    <h2>Readings</h2>
+            <h2>Readings</h2>
     <ul>
         <li><a href="reading1.html">Restaurant Websites</a></li>
         <li><a href="reading2.html">The New Turing Test</a></li>
         <li>...</li>
     </ul>
+        </main>
+    </div>
+
+        <div class="grid">
+        <main>
+            <p>    </ul>
     <h2>Projects</h2>
     <ul>
         <li><a href="p1/index.html">Project 1. Restaurant or Café Variations</a></li>
         <li>Project 2. Book → Website</li>
         <li>Project 3. Standby Mode</li>
-    </ul>
+    </ul></p>
+        </main>
+    </div>
     </body>
 </body>
 </html>
