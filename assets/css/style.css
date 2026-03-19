@@ -1,3 +1,140 @@
 * {
     box-sizing: border-box;
 }
+
+
+     @font-face {
+      font-family: "Nicholas";
+      src: url("Fonts/nicholas.otf") format("opentype");
+    }
+      @font-face{
+        font-family:"ebgaramond-reg";
+        src: url("Fonts/ebgaramond-reg") format("opentype");
+      }
+
+
+    html{
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url(stars-computer.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    h1{
+        font-family: "Nicholas";
+        color: #fffbe7;
+        letter-spacing: 5px;
+        text-align: center;
+        font-size: 65px;
+        font-weight: 100;
+        text-shadow: 0 0 5px #e9e2c1,
+                     0 0 10px #e1c865,
+                     0 0 30px #d7bf38,
+                     0 0 50px #a18d16;
+    }
+
+    h2{
+        font-family: "ebgaramond-reg";
+        color: #1a1a49;
+        letter-spacing: 2px;
+        font-size: 35px;
+        font-weight: 100;
+        line-height: 1;
+    }
+
+    p{
+        font-family: "ebagarmond-reg";
+        color: #1a1a49;
+        line-height: 2;
+        font-size: 20px;
+    }
+
+    .grid{
+        display:flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 5px;
+            flex-wrap: wrap;
+    }
+
+    main{
+        width: 100%;
+        height:auto;
+        background-color: #d2d9e3;
+        border: 6px double #3c5275;
+        color: #3d3028;
+        margin: 3%;
+
+        padding: 5%;
+    }
+
+    li{
+        font-family: "ebgaramond-reg";
+        font-size: 20px;
+        line-height: 130%;
+    }
+
+    a{
+        font-family: "ebgaramond-reg";
+        color: #1a1a49;
+        font-size: 20px;
+        transition: 0.3s;
+        text-decoration: none;
+}
+
+a:hover{
+    color: #fffdf2;
+    text-shadow: 0 0 5px #e9e2c1,
+                 0 0 10px #e1c865,
+                 0 0 30px #d7bf38,
+                 0 0 50px #a18d16;
+}
+
+.box-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: left;
+  align-items: stretch; 
+}
+
+.box-grid > * {
+  background-color: #d2d9e3;
+  border: 6px double #3c5275;
+  padding: 20px;
+  box-sizing: border-box;
+  height: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+main audio {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+main iframe {
+  display: block;
+  width: 90%;
+  max-width: 700px;
+  height: 60vh;        /* responsive height */
+  margin: 5% auto;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  main {
+    font-size: 4vw;
+  }
+}
