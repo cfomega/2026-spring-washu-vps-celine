@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Crimson Regular";
+  src: url("p2-fonts/CrimsonText-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Crimson Bold";
+  src: url("p2-fonts/CrimsonText-Bold.ttf") format("truetype");
+}
+
+strong, b {
+  font-family: "Crimson Bold", serif;
+  font-weight: bold;
+}
+
+h1{
+  font-family:"Crimson Regular";
+  text-align:center;
+  font-size: 350%;
+  letter-spacing: 5px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2{
+  font-family:"Crimson Regular";
+  font-size: 150%;
+  text-align: center;
+  letter-spacing: 5px;
+
+}
+
 body {
   scroll-snap-type: y mandatory;  
 }
@@ -9,9 +41,6 @@ html, body {
   overflow-y: scroll;
 }
 
-.h1{
-}
-
 .panel {
   position: relative;          
   height: 100vh;             
@@ -20,12 +49,19 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
 
-  display: flex;
   align-items: center;
   justify-content: center;
-  color: #F6EAD6;
-  font-size: 3rem;
+  display: flex;
   scroll-snap-align: start;
+
+}
+
+.content{
+  display: relative;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10%;
 }
 
 .panel1 {
@@ -72,3 +108,44 @@ html, body {
   z-index: 3
 }
 
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #EA4938;
+}
+
+.navbar-container {
+  position:fixed;
+  display: block;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 5%;
+  padding-top: 3%;
+  z-index: 1000;
+ 
+  font-family: "Eveleth Clean Regular", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  gap: 8%;
+    
+}
+
+.navbar a {
+  text-decoration: none;
+  opacity: 0.5;
+  color: white;
+  font-family: "Crimson Bold", sans-serif;
+  }
+
+  .navbar a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
