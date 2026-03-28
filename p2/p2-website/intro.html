@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History of Japanese Postcards</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History of Japanese Postcards</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+<style>
+    .navbar {
+  position: fixed;     /* Fixes navbar at the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;        /* Full width */
+  background-color: white; /* or whatever background so content behind is not visible */
+  z-index: 1000;      /* High enough to stay above other elements */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: subtle shadow for separation */
+}
+
+/* Add some top padding/margin to the content below so it doesn't hide behind the fixed navbar */
+.content, section.content, .box-grid {
+  margin-top: 80px; /* Adjust based on navbar height */
+}
+</style>
+
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" style="color: black">HOME</a>
+              
+            <div class="dropdown">
+                <div class="dropbtn" style="color:black"> WRITINGS</div>
+                    <div class="dropdown-content">
+                        <a href="intro.html">INTRO: ART OF THE JAPANESE POSTCARD</a>
+                        <a href="wider-world.html">AN OPENING INTO A WIDER WORLD</a>
+                        <a href="pcc-in-japan.html">POSTCARDS, COMMERCE, AND CREATIVITY IN JAPAN</a>
+                        <a href="postcard-history.html">POSTCARD HISTORY</a>
+                        <a href="postcards-observed.html">POSTCARDS OBSERVED</a>
+                        <a href="artists-biographies.html">ARTISTS' BIOGRAPHIES</a>
+                    </div>
+            </div>
+            
+            <div class="dropdown">
+                <div class="dropbtn"><a href="gallery.html" style="color:#f04936">GALLERY</a></div>
+                    <div class="dropdown-content">
+                        <a href="written-art.html">WORKS FROM THE WRITINGS</a>
+                        <a href="postcard-history-art.html">POSTCARD HISTORY ART</a>
+                        <a href="russo-japanese.html">THE RUSSO-JAPANESE WAR</a>
+                        <a href="artist-cards.html">ARTIST CARDS</a>
+                        <a href="nouveau.html">ART NOUVEAU</a>
+                        <a href="deco.html">ART DECO</a>
+                        <a href="humor.html">THE WORLD OF HUMOR</a>
+                        <a href="advertising.html">ADVERTISING</a>
+                        <a href="new-years.html">NEW YEAR'S GREETINGS</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+  <section>   
+<div class="content">
+<div class="box-grid" style="grid-template-columns: repeat(2, 1fr)">  
+      <img src="image-link" alt="Artwork">
+
+    <div class="hero-text">
+      <h2>WORK NAME</h2>
+      <p><strong>Artist</strong></p>
+      <p>(dates of artist)</p>
+      <p>From the series/source/origin</p>
+      <p><em>Title of series</em></p>
+      <p>Era/Period of Time</p>
+    </div>
+  </div>
+    </section>
+
+
+
+
+<!-- CONTENT SECTION -->
+<section class="content">
+  <h1>ART OF THE JAPANESE POSTCARD</h1>
+  <h2>ANNE NISHIMURA MORSE</h2>
+
+<div class="box-grid" style="grid-template-columns: repeat(2, 1fr)">
+    <p>
+      When the postcard was first introduced in Japan by its government in 1873,
+      it was just one part of an unprecedented campaign of modernization begun in 1868...
+    </p>
+
+    <img src="image-link" alt="Artwork">
+  </div>
+</section>
+
 </body>
 </html>
