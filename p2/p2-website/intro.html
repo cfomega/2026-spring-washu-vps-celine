@@ -24,6 +24,54 @@
 .content, section.content, .box-grid {
   margin-top: 80px; /* Adjust based on navbar height */
 }
+
+.box-grid{
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5%;
+  text-align: left;
+  align-items: start; 
+  position: relative;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* <-- this centers everything inside */
+  text-align: center;     /* <-- this centers text */
+}
+
+.page-wrapper {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: left;
+  display: block; /* remove flex centering */
+}
+
+/* Ensure box-grid inside page-wrapper aligns left */
+.page-wrapper .box-grid {
+  display: grid;                     /* ensure it's a grid */
+  grid-template-columns: repeat(2, 1fr); /* keep your two columns */
+  gap: 3%;                           /* spacing between columns */
+  justify-items: start;              /* align content to the left in each column */
+  align-items: start;                /* <-- align items at the top */
+}
+
+/* Remove extra margin from <p> inside grid */
+.page-wrapper .box-grid p {
+  margin: 0;
+}
+
+/* Ensure headings line up with paragraph */
+.page-wrapper h1,
+.page-wrapper h2,
+.page-wrapper p {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+
+}
+
 </style>
 
     <div class="navbar">
@@ -31,7 +79,7 @@
             <a href="index.html" style="color: black">HOME</a>
               
             <div class="dropdown">
-                <div class="dropbtn" style="color:black"> WRITINGS</div>
+                <div class="dropbtn" style="color:#f04936"> WRITINGS</div>
                     <div class="dropdown-content">
                         <a href="intro.html">INTRO: ART OF THE JAPANESE POSTCARD</a>
                         <a href="wider-world.html">AN OPENING INTO A WIDER WORLD</a>
@@ -43,7 +91,7 @@
             </div>
             
             <div class="dropdown">
-                <div class="dropbtn"><a href="gallery.html" style="color:#f04936">GALLERY</a></div>
+                <div class="dropbtn"><a href="gallery.html" style="color:black">GALLERY</a></div>
                     <div class="dropdown-content">
                         <a href="written-art.html">WORKS FROM THE WRITINGS</a>
                         <a href="postcard-history-art.html">POSTCARD HISTORY ART</a>
@@ -59,13 +107,12 @@
         </div>
     </div>
 
-  <section>   
-<div class="content">
-<div class="box-grid" style="grid-template-columns: repeat(2, 1fr)">  
-      <img src="image-link" alt="Artwork">
+<section class="content">
+  <div class="box-grid">  
+    <img src="image-link" alt="Artwork">
 
-    <div class="hero-text">
-      <h2>WORK NAME</h2>
+    <div class="hero-text" style="text-align: left;">
+      <h2>WORK NAME</h2><br><br>
       <p><strong>Artist</strong></p>
       <p>(dates of artist)</p>
       <p>From the series/source/origin</p>
@@ -73,23 +120,66 @@
       <p>Era/Period of Time</p>
     </div>
   </div>
-    </section>
+</section>
 
 
-
-
-<!-- CONTENT SECTION -->
 <section class="content">
-  <h1>ART OF THE JAPANESE POSTCARD</h1>
-  <h2>ANNE NISHIMURA MORSE</h2>
+  <div class="page-wrapper">
+    <h1>ART OF THE JAPANESE POSTCARD</h1>
+    <h2>ANNE NISHIMURA MORSE</h2>
 
-<div class="box-grid" style="grid-template-columns: repeat(2, 1fr)">
-    <p>
-      When the postcard was first introduced in Japan by its government in 1873,
-      it was just one part of an unprecedented campaign of modernization begun in 1868...
-    </p>
+    <div class="box-grid">
 
-    <img src="image-link" alt="Artwork">
+      <!-- Item 1: Text -->
+      <div>
+        <p>
+          When the postcard was first introduced in Japan by its government in 1873,
+          it was just one part of an unprecedented campaign of modernization begun in 1868 in the name of the emperor Meiji (reigned 1868-1912). The arrival of the United States Navy Admiral Matthew Perry's "black ships"
+          in 1853 had forced Japan to repudiate its centuries-old policy of national seclusion, and the emperor's advisors decided on a course of adopting Western technology and cultural institutions in order to avoid the colonization
+          that had beset Japan's neighbors on the Asian continent. Along with major innovations in commerce and industry had come profound changes in nearly every sector of Japanese society: many forsook traditional dress for European-style attire;
+          lithography rapidly replaced woodblock printingl and official buildings began to be constructed in brick in Wester architectural styles. The first Japanese postcards were of the type devised by the Austro-Hungarian postal service four
+          years earlier and immediately adopted by other countries in Europe. Simple in design, they had spaces for an address and imprinted stamp on one side and a blank space for the message on the other. 
+        </p>
+      </div>
+
+      <!-- Item 2: Image + info -->
+      <div>
+        <img src="image-link" alt="Artwork" style="width:100%">
+        <div class="hero-text" style="text-align: left; line-height: 300%;">
+          <h2>WORK NAME</h2>
+          <p><strong>Artist</strong></p>
+          <p>(dates of artist)</p>
+          <p>From the series/source/origin</p>
+          <p><em>Title of series</em></p>
+          <p>Era/Period of Time</p>
+        </div>
+      </div>
+
+      <!-- Item 3: Image + info -->
+      <div>
+        <img src="image-link" alt="Artwork" style="width:100%;">
+        <div class="hero-text" style="text-align: left; line-height: 300%;">
+          <h2>WORK NAME</h2>
+          <p><strong>Artist</strong></p>
+          <p>(dates of artist)</p>
+          <p>From the series/source/origin</p>
+          <p><em>Title of series</em></p>
+          <p>Era/Period of Time</p>
+        </div>
+      </div>
+
+      <div>
+        <p>
+          The Japanese postal service itself had been reformed after that of England beginning in 1871, and like the system it emulated, the Japanese service at first declared that the exclusive right of publishing postcards belonged to the government.
+          For the next twenty-seven years of their use in Japan, the Teishinshō (Ministry of Communications) retained that right; while in Europe hundreds of millions of postcards were produced by the late 1890s by private firms and magazines, such as
+          the German <i>Simplicissmus</i> and the French <i>Cocorico</i> and <i>Lie Rire</i>. It is difficult to imagine today how important the Japanese government's announcement of October 1900, that it would relinquish control over the publication of postcards,
+          was to Japanese society. Almost immediately Japan found in the postcard a means for different sectors —— department stores, medical schools, artists associations, and the military —— to project new images of themselves, and for the ever-increasing numbers
+          of literate individuals to advertise their modernity. Futhermore, the postcard made possible the wide and rapid circulation of an exciting, innovative visual vocabulary that had developed in response to broad debates about Japanese national identity and
+          power, as well as about the course htat Japanese art should take in the face of...
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
