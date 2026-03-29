@@ -1,11 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History of Japanese Postcards</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+<style>
+    .navbar {
+  position: fixed;     /* Fixes navbar at the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;        /* Full width */
+  background-color: white; /* or whatever background so content behind is not visible */
+  z-index: 1000;      /* High enough to stay above other elements */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: subtle shadow for separation */
+}
+
+/* Add some top padding/margin to the content below so it doesn't hide behind the fixed navbar */
+.content, section.content, .box-grid {
+  margin-top: 80px; /* Adjust based on navbar height */
+}
+
+.box-grid{
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5%;
+  text-align: left;
+  align-items: start; 
+  position: relative;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* <-- this centers everything inside */
+  text-align: center;     /* <-- this centers text */
+}
+
+.page-wrapper {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: left;
+  display: block; /* remove flex centering */
+}
+
+/* Ensure box-grid inside page-wrapper aligns left */
+.page-wrapper .box-grid {
+  display: grid;                     /* ensure it's a grid */
+  grid-template-columns: repeat(2, 1fr); /* keep your two columns */
+  gap: 3%;                           /* spacing between columns */
+  justify-items: start;              /* align content to the left in each column */
+  align-items: start;                /* <-- align items at the top */
+}
+
+/* Remove extra margin from <p> inside grid */
+.page-wrapper .box-grid p {
+  margin: 0;
+}
+
+/* Ensure headings line up with paragraph */
+.page-wrapper h1,
+.page-wrapper h2,
+.page-wrapper p {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+
+}
+
+</style>
+
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" style="color: black">HOME</a>
+              
+            <div class="dropdown">
+                <div class="dropbtn" style="color:#f04936"> WRITINGS</div>
+                    <div class="dropdown-content">
+                        <a href="intro.html">INTRO: ART OF THE JAPANESE POSTCARD</a>
+                        <a href="wider-world.html">AN OPENING INTO A WIDER WORLD</a>
+                        <a href="pcc-in-japan.html">POSTCARDS, COMMERCE, AND CREATIVITY IN JAPAN</a>
+                        <a href="postcard-history.html">POSTCARD HISTORY</a>
+                        <a href="postcards-observed.html">POSTCARDS OBSERVED</a>
+                    </div>
+            </div>
+            
+            <div class="dropdown">
+                <div class="dropbtn"><a href="gallery.html" style="color:black">GALLERY</a></div>
+                    <div class="dropdown-content">
+                        <a href="written-art.html">WORKS FROM THE WRITINGS</a>
+                        <a href="postcard-history-art.html">POSTCARD HISTORY ART</a>
+                        <a href="russo-japanese.html">THE RUSSO-JAPANESE WAR</a>
+                        <a href="artist-cards.html">ARTIST CARDS</a>
+                        <a href="nouveau.html">ART NOUVEAU</a>
+                        <a href="deco.html">ART DECO</a>
+                        <a href="humor.html">THE WORLD OF HUMOR</a>
+                        <a href="advertising.html">ADVERTISING</a>
+                        <a href="new-years.html">NEW YEAR'S GREETINGS</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+<section class="content">
+  <div class="box-grid">  
+    <img src="image-link" alt="Artwork">
+
+    <div class="hero-text" style="text-align: left;">
+      <h2>WORK NAME</h2><br><br>
+      <p><strong>Artist</strong></p>
+      <p>(dates of artist)</p>
+      <p>From the series/source/origin</p>
+      <p><em>Title of series</em></p>
+      <p>Era/Period of Time</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="content">
+  <div class="page-wrapper">
+    <h1>POSTCARDS, COMMERCE, AND CREATIVITY IN JAPAN, 1904-1940</h1>
+    <h2>KENDALL H. BROWN</h2>
+
+    <div class="box-grid">
+
+      <!-- Item 1: Text -->
+      <div>
+        <p>
+            Of the many changes that contributed to Japan's modernization — its transformation into an internation, industrial, and urban society — two fo the most pervasive were in visual and consumer culture.
+            As the expatriate American writer Lafcadio Hearn noted in 1904, the Russo Japanese War then underway led to epochal changes in photography as well as to a boom in commerical goods bearing war-related deisgns.
+            <i>Ehagaki</i> (picture postcards) were chief among the new commerical items whose popularity was born of war. Indeed, among teh war-themed goods, Hearn credited the Mitsukoshi Dry Goods Store with "the best...designs on the market."
+            Although he attributed the Japanese passion for clever products to a "play impulse" that turned mundane things into artistic objects, it equally could be ascribed to burgeoning Japanese consumerism. During the three decades from the 
+            end fo teh Russo-Japanese War to the beginning of Japan's next major war in Asia in 1937, it was the floursihing commerical sector that stimulated most changes in popular design.
+
+        </p>
+      </div>
+
+      <!-- Item 2: Image + info -->
+      <div>
+        <img src="image-link" alt="Artwork" style="width:100%">
+        <div class="hero-text" style="text-align: left; line-height: 300%;">
+          <h2>WORK NAME</h2>
+          <p><strong>Artist</strong></p>
+          <p>(dates of artist)</p>
+          <p>From the series/source/origin</p>
+          <p><em>Title of series</em></p>
+          <p>Era/Period of Time</p>
+        </div>
+      </div>
+
+      <!-- Item 3: Image + info -->
+      <div>
+        <img src="image-link" alt="Artwork" style="width:100%;">
+        <div class="hero-text" style="text-align: left; line-height: 300%;">
+          <h2>WORK NAME</h2>
+          <p><strong>Artist</strong></p>
+          <p>(dates of artist)</p>
+          <p>From the series/source/origin</p>
+          <p><em>Title of series</em></p>
+          <p>Era/Period of Time</p>
+        </div>
+      </div>
+
+      <div>
+        <p>
+            One of the expressions of this symbiosis between visual and consumer culture was the <i>esugoroku</i> (illustrated board game). Although they had been in use since the fifteenth century,
+            these games grew dramatically in popularity during the late Meiji and early Taishō eras (about 1906-1918) when they were distributed  in the New Year's issues of the growing number of new magazines.
+            A good example is the <i>hayari sugoroku</i> (fashionable sugoroku) published in the January 1, 1906, issue of <i>Jikō</i> (Fashion), the Mitsukoshi house journal. Illustrated by Odake Kokkan (1880-1945),
+            the game board features twenty vignettes of modern life, most showing the well-to-do young women who were Mitsukoshi's core customers. In addition to a scene of a man taking photographs and one of a movie, there are pictures of women playing
+            tennus, cooking, knitting, playing Japanese and Western music, teaching school, riding bicycles, and doing <i>ikebana</i> (Japanese flower arrangement; the caption reveals that it is now popular in Europe)
+            Illustrations of men and women show them wearing Western fashion, attending a charity bazaar, viewing a triumphal review and participating in a patriotic garden party. IN addition, and most german here, one picture shows a
+            Mitsukoshi-issued artistic postcard, its caption explaining that <i>ehagaki</i> will remain fashionable in the New Year. This inclusion of postcards among stylish customs suggests...
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
