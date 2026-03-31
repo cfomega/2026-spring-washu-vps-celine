@@ -144,6 +144,10 @@ html, body {
   background-image: url("p2-images/vignette-of-store.jpg");
 }
 
+.img{
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+}
+
 .box-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
@@ -385,19 +389,6 @@ html, body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* --- Text Under Images --- */
-.carousel-text {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: rgb(0, 0, 0); 
-  text-align: start;           
-}
-
-.carousel-text h3 {
-  margin-bottom: 5px;
-}
-
 /* --- Navigation Buttons --- */
 .nav-buttons {
   position: absolute;
@@ -431,89 +422,135 @@ button.carousel-button:hover {
   background-color: #a63c1e;
 }
 
-/* --- Responsive for Mobile --- */
-@media (max-width: 768px) {
-  .carousel-content {
-    flex-direction: column;
-    gap: 15px;
-    width: 95%;
-  }
 
-  button.carousel-button {
-    font-size: 1.5rem;
-    margin: 0 10px;
-  }
-
-  .carousel-content img {
-    max-height: 50vh;
-  }
+.page-wrapper {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: left;
+  display: block; /* remove flex centering */
 }
 
+/* Ensure box-grid inside page-wrapper aligns left */
+.page-wrapper .box-grid {
+  display: grid;                     /* ensure it's a grid */
+  grid-template-columns: repeat(2, 1fr); /* keep your two columns */
+  gap: 3%;                           /* spacing between columns */
+  justify-items: start;              /* align content to the left in each column */
+  align-items: start;                /* <-- align items at the top */
+}
 
-  @media (max-width: 768px) {
+/* Remove extra margin from <p> inside grid */
+.page-wrapper .box-grid p {
+  margin: 0;
+}
 
-  .writing-container,
-  .content-container {
-    flex-direction: column;
+.page-wrapper{
+  margin-bottom: 20%;
+}
+
+/* Ensure headings line up with paragraph */
+.page-wrapper h1,
+.page-wrapper h2,
+.page-wrapper p {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+
+}
+
+.corner-button {
+  position: fixed;      /* stays in the corner even when scrolling */
+  bottom: 20px;         /* distance from bottom */
+  padding: 10px 20px;
+  background-color: #f04936;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;        /* above other content */
+  transition: background-color 0.3s;
+
+  font-size: 130%;
+  padding: 15px 15px;
+  border-radius: 8px;
+}
+
+.corner-button:hover {
+  text-decoration: underline;
+}
+
+/* Align specific buttons */
+.corner-button.back {
+  left: 20px;           /* bottom-left corner */
+}
+
+.corner-button.next {
+  right: 20px;          /* bottom-right corner */
+}
+
+@media (max-width: 768px) {
+
+@media (max-width: 768px) {
+
+  /* Make grid one column */
+  .box-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px;
+  }
+
+  /* Full width for images and text blocks */
+  .box-grid img,
+  .box-grid > div {
+    width: 100% !important;
+  }
+
+  /* Section margins */
+  section.content, 
+  .archive-carousel {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Top padding so content appears below fixed navbar */
+  .archive-carousel,
+  section.content {
+    padding-top: 100px !important; /* adjust if your navbar is taller */
+    padding-bottom: 50px !important; /* spacing at bottom for scrolling */
+  }
+
+  /* Hero text adjustments */
+  .hero-text {
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  /* Font sizing for mobile */
+  h1 { font-size: 1.8rem !important; }
+  h2 { font-size: 1.2rem !important; }
+  p  { font-size: 1rem !important; }
+
+  /* Carousel adjustments */
+  .carousel-content {
+    flex-direction: column !important;
     align-items: center;
   }
 
-  .writing-container .writing-info,
-  .text-block {
-    text-align: center;
-    max-width: 100%;
+  .carousel-content img {
+    width: 90% !important;
+    margin-bottom: 20px;
   }
 
-  .box-grid {
-    grid-template-columns: 1fr;  
-    max-width: 90%;
-    gap: 20px;
+  .carousel-content > div {
+    margin-top: 0 !important; /* remove diagonal offset */
   }
 
-  p {
-    margin-left: 5% !important;
-    margin-right: 5% !important;
+  /* Panel 2 overscroll fix */
+  .panel2 .box-grid {
+    display: block !important;
+    overflow-x: hidden;
   }
+}
 
-  h1 {
-    font-size: 200%;
-    letter-spacing: 2px;
-  }
-
-  h2 {
-    font-size: 120%;
-    letter-spacing: 2px;
-  }
-
-  .navbar-container {
-    padding: 20px;
-    gap: 20px;
-    font-size: 18px;
-    justify-content: center;
-  }
-
-  .button {
-    font-size: 120%;
-    padding: 10px 25px;
-  }
-
-  .navbar a {
-  opacity: 1 !important;
-  }
-
-  .panel2 .content {
-  margin-top: 70%;
-  margin-bottom: 20%;
-  }
-
-    .card h2 {
-    font-size: 140%; 
-  }
-  .card p {
-    font-size: 105%;
-  }
-  .panel h1 {
-    font-size: 250%;
-  }
-
-  }
+}

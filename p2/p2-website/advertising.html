@@ -1,11 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Two Section Carousel Paging</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" style="color: black">HOME</a>
+              
+            <div class="dropdown">
+                <div class="dropbtn" style="color:black"> WRITINGS</div>
+                    <div class="dropdown-content">
+                        <a href="intro.html">INTRO: ART OF THE JAPANESE POSTCARD</a>
+                        <a href="wider-world.html">AN OPENING INTO A WIDER WORLD</a>
+                        <a href="pcc-in-japan.html">POSTCARDS, COMMERCE, AND CREATIVITY IN JAPAN</a>
+                        <a href="postcard-history.html">POSTCARD HISTORY</a>
+                        <a href="postcards-observed.html">POSTCARDS OBSERVED</a>
+                    </div>
+            </div>
+            
+            <div class="dropdown">
+                <div class="dropbtn"><a href="gallery.html" style="color:#f04936">GALLERY</a></div>
+                    <div class="dropdown-content">
+                        <a href="written-art.html">WORKS FROM THE WRITINGS</a>
+                        <a href="postcard-history-art.html">POSTCARD HISTORY ART</a>
+                        <a href="russo-japanese.html">THE RUSSO-JAPANESE WAR</a>
+                        <a href="artist-cards.html">ARTIST CARDS</a>
+                        <a href="nouveau.html">ART NOUVEAU</a>
+                        <a href="deco.html">ART DECO</a>
+                        <a href="humor.html">THE WORLD OF HUMOR</a>
+                        <a href="advertising.html">ADVERTISING</a>
+                        <a href="new-years.html">NEW YEAR'S GREETINGS</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Carousel Section 1: Diagonal -->
+<section class="archive-carousel active" id="carousel1">
+  <div class="carousel-content diagonal full-screen" style="display:flex; gap:20px;">
+    <!-- Image 1 top-left, text below -->
+    <div style="flex:1;">
+      <img src="images/postcard1.jpg" alt="Artwork 1" style="width:100%; border-radius:4px;">
+      <div class="carousel-text">
+        <h3>Name of Work (IMG 1)</h3>
+        <p><strong>Artist 1</strong></p>
+        <p>From the series/source/origin 1</p>
+        <p><em>Title of series 1</em></p>
+        <p>Era/Period of Time 1</p>
+      </div>
+    </div>
+
+    <!-- Image 2 bottom-right, text above -->
+    <div style="flex:1; margin-top:80px;">
+      <div class="carousel-text">
+        <h3>Name of Work (IMG 2)</h3>
+        <p><strong>Artist 2</strong></p>
+        <p>From the series/source/origin 2</p>
+        <p><em>Title of series 2</em></p>
+        <p>Era/Period of Time 2</p>
+      </div>
+      <img src="images/postcard2.jpg" alt="Artwork 2" style="width:100%; border-radius:4px;">
+    </div>
+  </div>
+</section>
+
+<!-- Carousel Section 2: Horizontal side-by-side -->
+<section class="archive-carousel" id="carousel2">
+  <div class="carousel-content horizontal full-screen" style="display:flex; gap:20px;">
+    <!-- Image 3 -->
+    <div style="flex:1;">
+      <img src="images/postcard3.jpg" alt="Artwork 3" style="width:100%;">
+      <div class="carousel-text">
+        <h3>Name of Work (IMG 3)</h3>
+        <p><strong>Artist 3</strong></p>
+        <p>From the series/source/origin 3</p>
+        <p><em>Title of series 3</em></p>
+        <p>Era/Period of Time 3</p>
+      </div>
+    </div>
+
+    <!-- Image 4 -->
+    <div style="flex:1;">
+      <img src="images/postcard4.jpg" alt="Artwork 4" style="width:100%;">
+      <div class="carousel-text">
+        <h3>Name of Work (IMG 4)</h3>
+        <p><strong>Artist 4</strong></p>
+        <p>From the series/source/origin 4</p>
+        <p><em>Title of series 4</em></p>
+        <p>Era/Period of Time 4</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Carousel Section 3: Diagonal -->
+<section class="archive-carousel" id="carousel3">
+  <div class="carousel-content diagonal full-screen" style="display:flex; gap:20px;">
+    <!-- Image 5 top-left, text below -->
+    <div style="flex:1;">
+      <img src="images/postcard5.jpg" alt="Artwork 5" style="width:100%; border-radius:4px;">
+      <div class="carousel-text">
+        <h3>Name of Work (IMG 5)</h3>
+        <p><strong>Artist 5</strong></p>
+        <p>From the series/source/origin 5</p>
+        <p><em>Title of series 5</em></p>
+        <p>Era/Period of Time 5</p>
+      </div>
+    </div>
+
+    <!-- Image 6 bottom-right, text above -->
+    <div style="flex:1; margin-top:80px;">
+      <div class="carousel-text">
+        <h3>Name of Work (IMG 6)</h3>
+        <p><strong>Artist 6</strong></p>
+        <p>From the series/source/origin 6</p>
+        <p><em>Title of series 6</em></p>
+        <p>Era/Period of Time 6</p>
+      </div>
+      <img src="images/postcard6.jpg" alt="Artwork 6" style="width:100%; border-radius:4px;">
+    </div>
+  </div>
+</section>
+
+<!-- Carousel Section 4: Horizontal side-by-side -->
+<section class="archive-carousel" id="carousel4">
+  <div class="carousel-content horizontal full-screen" style="display:flex; gap:20px;">
+    <!-- Image 7 -->
+    <div style="flex:1;">
+      <img src="images/postcard7.jpg" alt="Artwork 7" style="width:100%;">
+      <div class="carousel-text">
+        <h3>Name of Work (IMG 7)</h3>
+        <p><strong>Artist 7</strong></p>
+        <p>From the series/source/origin 7</p>
+        <p><em>Title of series 7</em></p>
+        <p>Era/Period of Time 7</p>
+      </div>
+    </div>
+
+    <!-- Image 8 -->
+    <div style="flex:1;">
+      <img src="images/postcard8.jpg" alt="Artwork 8" style="width:100%;">
+      <div class="carousel-text">
+        <h3>Name of Work (IMG 8)</h3>
+        <p><strong>Artist 8</strong></p>
+        <p>From the series/source/origin 8</p>
+        <p><em>Title of series 8</em></p>
+        <p>Era/Period of Time 8</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <button class="carousel-button" id="prevBtn" aria-label="Previous Section">&#8592;</button>
+    <button class="carousel-button" id="nextBtn" aria-label="Next Section"> &#8594;</button>
+  </div>
+
+<script>
+  // Include all four carousel sections
+  const sections = [
+    document.getElementById('carousel1'),
+    document.getElementById('carousel2'),
+    document.getElementById('carousel3'),
+    document.getElementById('carousel4'),
+  ];
+
+  let currentIndex = 0;
+
+  const showSection = index => {
+    sections.forEach((sec, i) => {
+      sec.classList.toggle('active', i === index);
+    });
+  };
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + sections.length) % sections.length;
+    showSection(currentIndex);
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % sections.length;
+    showSection(currentIndex);
+  });
+</script>
+
 </body>
 </html>

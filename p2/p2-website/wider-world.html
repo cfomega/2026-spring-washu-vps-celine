@@ -42,34 +42,74 @@
 }
 
 .page-wrapper {
-  margin-left: 20%;
-  margin-right: 20%;
-  text-align: left;
-  display: block; /* remove flex centering */
+  margin-bottom: 17%;
 }
 
-/* Ensure box-grid inside page-wrapper aligns left */
-.page-wrapper .box-grid {
-  display: grid;                     /* ensure it's a grid */
-  grid-template-columns: repeat(2, 1fr); /* keep your two columns */
-  gap: 3%;                           /* spacing between columns */
-  justify-items: start;              /* align content to the left in each column */
-  align-items: start;                /* <-- align items at the top */
-}
+@media (max-width: 768px) {
 
-/* Remove extra margin from <p> inside grid */
-.page-wrapper .box-grid p {
-  margin: 0;
-}
+    .navbar-container {
+    gap: 8%;
+    padding: 10px 5%;
+  }
 
-/* Ensure headings line up with paragraph */
-.page-wrapper h1,
-.page-wrapper h2,
-.page-wrapper p {
-  margin-left: 0;
-  margin-right: 0;
-  text-align: left;
+  .navbar a,
+  .dropbtn {
+    font-size: 1rem;
+  }
 
+  .dropdown-content {
+    min-width: 120px;
+    max-height: 250px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+  }
+
+  .box-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .box-grid img,
+  .box-grid > div {
+    width: 100% !important;
+  }
+
+  section.content,
+  .page-wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 25px !important; /* pushes content under navbar */
+    padding-bottom: 25px !important; /* extra bottom space for scrolling */
+  }
+
+  .hero-text {
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  h1 { font-size: 1.8rem !important; }
+  h2 { font-size: 1.2rem !important; }
+  p  { font-size: 1rem !important; }
+
+  .page-wrapper {
+    margin-bottom: 20px !important;
+  }
+
+  .carousel-content {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .carousel-content img {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .carousel-content > div {
+    margin-top: 0 !important;
+  }
 }
 
 </style>
@@ -92,7 +132,7 @@
             <div class="dropdown">
                 <div class="dropbtn"><a href="gallery.html" style="color:black">GALLERY</a></div>
                     <div class="dropdown-content">
-                        <a href="written-art.html">WORKS FROM THE WRITINGS</a>
+                        <a href="written-art.html">POSTCARDS FROM THE WRITINGS</a>
                         <a href="postcard-history-art.html">POSTCARD HISTORY ART</a>
                         <a href="russo-japanese.html">THE RUSSO-JAPANESE WAR</a>
                         <a href="artist-cards.html">ARTIST CARDS</a>
@@ -106,17 +146,16 @@
         </div>
     </div>
 
-<section class="content">
+<section class="content" style="margin-left: 20%; margin-right:20%; align-items: center;">
   <div class="box-grid">  
-    <img src="image-link" alt="Artwork">
+    <img src="p2-images/p2-gallery/written-art/wider-world-img/the-west.jpg" alt="Artwork" style="width:85%;height:auto;box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
 
     <div class="hero-text" style="text-align: left;">
-      <h2>WORK NAME</h2><br><br>
-      <p><strong>Artist</strong></p>
-      <p>(dates of artist)</p>
-      <p>From the series/source/origin</p>
-      <p><em>Title of series</em></p>
-      <p>Era/Period of Time</p>
+      <h2 style="text-align: left">THE WEST: SPARROWS IN THE PARK</h2><br><br>
+      <p><strong>Nakamura Fusetsu (1866-1943)</strong></p>
+      <p>From series <i>World Panorama</i></p>
+      <p><em>Postcard</em></p>
+      <p>Late Meiji Era</p>
     </div>
   </div>
 </section>
@@ -127,9 +166,7 @@
     <h1>AN OPENING INTO A WIDER WORLD</h1>
     <h2>J. THOMAS RIMER</h2>
 
-    <div class="box-grid">
-
-      <!-- Item 1: Text -->
+    <div class="box-grid" style="gap: 10%">
       <div>
         <p>
             Well before the beginning of the last century, postcards had become a prvileged means of communication around the world. For the Japanese public in particular,
@@ -147,27 +184,25 @@
         </p>
       </div>
 
-      <!-- Item 2: Image + info -->
       <div>
-        <img src="image-link" alt="Artwork" style="width:100%">
+        <img src=not here yet alt="Artwork" style="width:100%; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
         <div class="hero-text" style="text-align: left; line-height: 300%;">
-          <h2>WORK NAME</h2>
-          <p><strong>Artist</strong></p>
-          <p>(dates of artist)</p>
-          <p>From the series/source/origin</p>
-          <p><em>Title of series</em></p>
-          <p>Era/Period of Time</p>
+          <h2>POSTCARD SENT BY MORI ŌGAI TO HIS SON OTTO</h2>
+          <p><strong>Unnamed Artist</strong></p>
+          <p>From Bunkyō Ward Ōgai Memorial Hongō Library</p>
+          <p><em>Postcard (not included in book catalogue)</em></p>
+          <p>1905</p>
         </div>
       </div>
 
-      <!-- Item 3: Image + info -->
-      <div>
-        <img src="image-link" alt="Artwork" style="width:100%;">
+            <div>
+        <img src="p2-images/p2-gallery/written-art/wider-world-img/tsubosakadera.jpg" alt="Artwork" style="width:100%; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
         <div class="hero-text" style="text-align: left; line-height: 300%;">
-          <h2>POSTCARD SENT BY MORI ŌGAI TO HIS SON OTTO</h2>
-          <p><strong>Unamed Artist</strong></p>
-          <p>1905</p>
-          <p>Bunkyō Ward Ōgai Memorial Hongō Library</p>
+          <h2>TSUBOSAKADERA</h2>
+          <p><strong>Takehisa Yumeji (1884-1934)</strong></p>
+          <p>From series <i>Postcards of plays</i></p>
+          <p><em>Postcard</em></p>
+          <p>1912</p>
         </div>
       </div>
 
@@ -177,12 +212,16 @@
             arrangements for the Second Army during the fierce months of the Russo-Japanese War (1904-05). He and those close to him availed themselves of postcards for quick communication. The card illustrated
             here, for example, was sent by Ōgai to his son Otto. Such proliferation and ever-wider use of postcards suggest several aspects of the powerful impetus that came to Japanese culture in general, and
             the visual arts in particular, through these new conncetions with the West. In that sense, the cards created in Japan can serve as a visual emblem for vast shifts wihtin that society, as well as an
-            indication of Japan's shfiting role in the larger world.
+            indication of Japan's shfiting role in the larger world...<br><br><i>*Read more in the full text</i>
         </p>
       </div>
 
     </div>
   </div>
+
+  <a href="intro.html" class="corner-button back">← BACK</a>
+  <a href="pcc-in-japan.html" class="corner-button next">NEXT →</a>
+
 </section>
 
 </body>

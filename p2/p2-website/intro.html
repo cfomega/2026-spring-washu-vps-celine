@@ -41,37 +41,72 @@
   text-align: center;     /* <-- this centers text */
 }
 
-.page-wrapper {
-  margin-left: 20%;
-  margin-right: 20%;
-  text-align: left;
-  display: block; /* remove flex centering */
+@media (max-width: 768px) {
+
+    .navbar-container {
+    gap: 8%;
+    padding: 10px 5%;
+  }
+
+  .navbar a,
+  .dropbtn {
+    font-size: 1rem;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+    max-height: 250px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+  }
+
+  .box-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .box-grid img,
+  .box-grid > div {
+    width: 100% !important;
+  }
+
+  section.content,
+  .page-wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 25px !important; /* pushes content under navbar */
+    padding-bottom: 25px !important; /* extra bottom space for scrolling */
+  }
+
+  .hero-text {
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  h1 { font-size: 1.8rem !important; }
+  h2 { font-size: 1.2rem !important; }
+  p  { font-size: 1rem !important; }
+
+  .page-wrapper {
+    margin-bottom: 20px !important;
+  }
+
+  .carousel-content {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .carousel-content img {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .carousel-content > div {
+    margin-top: 0 !important;
+  }
 }
-
-/* Ensure box-grid inside page-wrapper aligns left */
-.page-wrapper .box-grid {
-  display: grid;                     /* ensure it's a grid */
-  grid-template-columns: repeat(2, 1fr); /* keep your two columns */
-  gap: 3%;                           /* spacing between columns */
-  justify-items: start;              /* align content to the left in each column */
-  align-items: start;                /* <-- align items at the top */
-}
-
-/* Remove extra margin from <p> inside grid */
-.page-wrapper .box-grid p {
-  margin: 0;
-}
-
-/* Ensure headings line up with paragraph */
-.page-wrapper h1,
-.page-wrapper h2,
-.page-wrapper p {
-  margin-left: 0;
-  margin-right: 0;
-  text-align: left;
-
-}
-
 </style>
 
     <div class="navbar">
@@ -86,14 +121,13 @@
                         <a href="pcc-in-japan.html">POSTCARDS, COMMERCE, AND CREATIVITY IN JAPAN</a>
                         <a href="postcard-history.html">POSTCARD HISTORY</a>
                         <a href="postcards-observed.html">POSTCARDS OBSERVED</a>
-                        <a href="artists-biographies.html">ARTISTS' BIOGRAPHIES</a>
                     </div>
             </div>
             
             <div class="dropdown">
                 <div class="dropbtn"><a href="gallery.html" style="color:black">GALLERY</a></div>
                     <div class="dropdown-content">
-                        <a href="written-art.html">WORKS FROM THE WRITINGS</a>
+                        <a href="written-art.html">POSTCARDS FROM THE WRITINGS</a>
                         <a href="postcard-history-art.html">POSTCARD HISTORY ART</a>
                         <a href="russo-japanese.html">THE RUSSO-JAPANESE WAR</a>
                         <a href="artist-cards.html">ARTIST CARDS</a>
@@ -107,17 +141,17 @@
         </div>
     </div>
 
-<section class="content">
+<section class="content" style="margin-left: 20%; margin-right:20%; align-items: center;">
   <div class="box-grid">  
-    <img src="image-link" alt="Artwork">
+    <img src="p2-images/p2-gallery/written-art/intro-img/geisha-and-biwa.jpg" alt="Artwork" style="width:85%;height:auto; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
 
     <div class="hero-text" style="text-align: left;">
-      <h2>WORK NAME</h2><br><br>
-      <p><strong>Artist</strong></p>
-      <p>(dates of artist)</p>
-      <p>From the series/source/origin</p>
-      <p><em>Title of series</em></p>
-      <p>Era/Period of Time</p>
+      <h2 style="text-align: left">GEISHA AND BIWA</h2><br><br>
+      <p><strong>Fujishima Takeji (1867-1943)</strong></p>
+      <p></p>
+      <p>From series <i>Beautiful women and music</i></p>
+      <p><em>Postcard</em></p>
+      <p>1905</p>
     </div>
   </div>
 </section>
@@ -128,43 +162,41 @@
     <h1>ART OF THE JAPANESE POSTCARD</h1>
     <h2>ANNE NISHIMURA MORSE</h2>
 
-    <div class="box-grid">
+    <div class="box-grid" style="gap: 10%">
 
-      <!-- Item 1: Text -->
       <div>
         <p>
           When the postcard was first introduced in Japan by its government in 1873,
           it was just one part of an unprecedented campaign of modernization begun in 1868 in the name of the emperor Meiji (reigned 1868-1912). The arrival of the United States Navy Admiral Matthew Perry's "black ships"
           in 1853 had forced Japan to repudiate its centuries-old policy of national seclusion, and the emperor's advisors decided on a course of adopting Western technology and cultural institutions in order to avoid the colonization
           that had beset Japan's neighbors on the Asian continent. Along with major innovations in commerce and industry had come profound changes in nearly every sector of Japanese society: many forsook traditional dress for European-style attire;
-          lithography rapidly replaced woodblock printingl and official buildings began to be constructed in brick in Wester architectural styles. The first Japanese postcards were of the type devised by the Austro-Hungarian postal service four
+          lithography rapidly replaced woodblock printing and official buildings began to be constructed in brick in Wester architectural styles. 
+          
+          <br><br>
+
+          The first Japanese postcards were of the type devised by the Austro-Hungarian postal service four
           years earlier and immediately adopted by other countries in Europe. Simple in design, they had spaces for an address and imprinted stamp on one side and a blank space for the message on the other. 
         </p>
       </div>
 
-      <!-- Item 2: Image + info -->
       <div>
-        <img src="image-link" alt="Artwork" style="width:100%">
-        <div class="hero-text" style="text-align: left; line-height: 300%;">
-          <h2>WORK NAME</h2>
-          <p><strong>Artist</strong></p>
-          <p>(dates of artist)</p>
-          <p>From the series/source/origin</p>
-          <p><em>Title of series</em></p>
-          <p>Era/Period of Time</p>
+        <img src="p2-images/p2-gallery/written-art/intro-img/cherry-blossoms-and-moon-npc.jpg" alt="Artwork" style="width:100%; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
+        <div class="hero-text" style="text-align: left; line-height: 300%; padding-top:10%">
+          <h2>CHERRY BLOSSOMS AND MOON</h2>
+          <p><strong>Terasaki Kōgyō</strong></p>
+          <p><i>Hanging Silk Scroll</i></p>
+          <p>Meiji Era, 1890-1910</p>
         </div>
       </div>
 
       <!-- Item 3: Image + info -->
       <div>
-        <img src="image-link" alt="Artwork" style="width:100%;">
-        <div class="hero-text" style="text-align: left; line-height: 300%;">
-          <h2>WORK NAME</h2>
-          <p><strong>Artist</strong></p>
-          <p>(dates of artist)</p>
-          <p>From the series/source/origin</p>
-          <p><em>Title of series</em></p>
-          <p>Era/Period of Time</p>
+        <img src="p2-images/p2-gallery/written-art/intro-img/floral-ball-ornament-npc.jpg" alt="Artwork" style="width:100%; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
+        <div class="hero-text" style="text-align: left; line-height: 250%;">
+          <h2>KUSUDAMA (FLORAL ORNAMENT)</h2>
+          <p><strong>Mizuno Toshikata</strong></p>
+          <p><i>Woodblock Print</i></p>
+          <p>1902</p>
         </div>
       </div>
 
@@ -172,15 +204,22 @@
         <p>
           The Japanese postal service itself had been reformed after that of England beginning in 1871, and like the system it emulated, the Japanese service at first declared that the exclusive right of publishing postcards belonged to the government.
           For the next twenty-seven years of their use in Japan, the Teishinshō (Ministry of Communications) retained that right; while in Europe hundreds of millions of postcards were produced by the late 1890s by private firms and magazines, such as
-          the German <i>Simplicissmus</i> and the French <i>Cocorico</i> and <i>Lie Rire</i>. It is difficult to imagine today how important the Japanese government's announcement of October 1900, that it would relinquish control over the publication of postcards,
-          was to Japanese society. Almost immediately Japan found in the postcard a means for different sectors —— department stores, medical schools, artists associations, and the military —— to project new images of themselves, and for the ever-increasing numbers
+          the German <i>Simplicissmus</i> and the French <i>Cocorico</i> and <i>Lie Rire</i>. 
+          
+          <br><br>
+          
+          It is difficult to imagine today how important the Japanese government's announcement of October 1900, that it would relinquish control over the publication of postcards,
+          was to Japanese society. Almost immediately Japan found in the postcard a means for different sectors — department stores, medical schools, artists associations, and the military — to project new images of themselves, and for the ever-increasing numbers
           of literate individuals to advertise their modernity. Futhermore, the postcard made possible the wide and rapid circulation of an exciting, innovative visual vocabulary that had developed in response to broad debates about Japanese national identity and
-          power, as well as about the course htat Japanese art should take in the face of...
+          power, as well as about the course htat Japanese art should take in the face of...<br><br><i>*Read more in the full text</i>
         </p>
       </div>
 
     </div>
   </div>
+
+  <a href="wider-world.html" class="corner-button next">NEXT →</a>
+
 </section>
 
 </body>

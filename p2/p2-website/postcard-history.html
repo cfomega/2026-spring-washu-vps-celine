@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>History of Japanese Postcards</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History of Japanese Postcards</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -72,6 +72,109 @@
 
 }
 
+.page-wrapper {
+  margin-bottom: 10%;
+}
+.content {
+  margin-bottom: 100px; /* adds space below all content */
+}
+
+.corner-button {
+  position: fixed;      /* stays in the corner even when scrolling */
+  bottom: 20px;         /* distance from bottom */
+  padding: 10px 20px;
+  background-color: #f04936;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;        /* above other content */
+  transition: background-color 0.3s;
+
+  font-size: 130%;
+  padding: 15px 15px;
+  border-radius: 8px;
+}
+
+.corner-button:hover {
+  text-decoration: underline;
+}
+
+/* Align specific buttons */
+.corner-button.back {
+  left: 20px;           /* bottom-left corner */
+}
+
+.corner-button.next {
+  right: 20px;          /* bottom-right corner */
+}
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+    gap: 8%;
+    padding: 10px 5%;
+  }
+
+  .navbar a,
+  .dropbtn {
+    font-size: 1rem;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+    max-height: 250px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+  }
+
+  .box-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .box-grid img,
+  .box-grid > div {
+    width: 100% !important;
+  }
+
+  section.content,
+  .page-wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 25px !important; /* pushes content under navbar */
+    padding-bottom: 25px !important; /* extra bottom space for scrolling */
+  }
+
+  .hero-text {
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  h1 { font-size: 1.8rem !important; }
+  h2 { font-size: 1.2rem !important; }
+  p  { font-size: 1rem !important; }
+
+  .page-wrapper {
+    margin-bottom: 20px !important;
+  }
+
+  .carousel-content {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .carousel-content img {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .carousel-content > div {
+    margin-top: 0 !important;
+  }
+}
 </style>
 
     <div class="navbar">
@@ -92,7 +195,7 @@
             <div class="dropdown">
                 <div class="dropbtn"><a href="gallery.html" style="color:black">GALLERY</a></div>
                     <div class="dropdown-content">
-                        <a href="written-art.html">WORKS FROM THE WRITINGS</a>
+                        <a href="written-art.html">POSTCARDS FROM THE WRITINGS</a>
                         <a href="postcard-history-art.html">POSTCARD HISTORY ART</a>
                         <a href="russo-japanese.html">THE RUSSO-JAPANESE WAR</a>
                         <a href="artist-cards.html">ARTIST CARDS</a>
@@ -106,18 +209,18 @@
         </div>
     </div>
 
-<section class="content">
+<section class="content" style="margin-left: 20%; margin-right:20%; align-items: center;">
   <div class="box-grid">  
-    <img src="image-link" alt="Artwork">
+    <img src="p2-images/p2-gallery/written-art/postcard-history/client-in-a-print-shop.jpg" alt="Artwork" style="width:80%; height:auto; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
 
     <div class="hero-text" style="text-align: left;">
-      <h2>WORK NAME</h2><br><br>
-      <p><strong>Artist</strong></p>
-      <p>(dates of artist)</p>
-      <p>From the series/source/origin</p>
-      <p><em>Title of series</em></p>
-      <p>Era/Period of Time</p>
+      <h2>CLIENT IN A PRINT SHOP</h2><br><br>
+      <p><strong>Unnamed Artist</strong></p>
+      <p>From collection <i>Ehagaki sekai</i></p>
+      <p><em>Postcard</em></p>
+      <p>1908</p>
     </div>
+
   </div>
 </section>
 
@@ -126,13 +229,11 @@
   <div class="page-wrapper">
     <h1>POSTCARD HISTORY</h1>
 
-    <div class="box-grid">
-
-      <!-- Item 1: Text -->
+    <div class="box-grid" style="gap:10%">
       <div>
         <p>
-            <i>*Specific aspects in postcard history such as the Russo-Japanese War and Art Nouveau and Deco Movements are further explored in a set of chapters available in the full text</i><br>
-            With the establishment of the Japanes national postal service in 1871, the general populace began to send personal communciations. No longer was mail reserved for the military elite who had controlled the official horse-relay system from their seat of power in Edo (modern-day Tokyo) to the provinces,
+            <i>*Specific aspects in postcard history such as the Russo-Japanese War and Art Nouveau and Deco Movements are further explored in a set of chapters available in the full text</i><br><br>
+            With the establishment of the Japanese national postal service in 1871, the general populace began to send personal communciations. No longer was mail reserved for the military elite who had controlled the official horse-relay system from their seat of power in Edo (modern-day Tokyo) to the provinces,
             nore was it reserved for the wealthy merchants who had formed their own courier system between the cities of Osaka, Kyoto, and Edo. Based on the British system, the new service, with its relays of runners, rapidly permitted ordinary citizens to send letters throughout the country. By 1877, Japan had joined
             the Universal Postal Union, facilitating mail delivery to and from Europe and the United states. 
             
@@ -143,30 +244,24 @@
         </p>
       </div>
 
-      <!-- Item 2: Image + info -->
       <div>
-        <img src="image-link" alt="Artwork" style="width:100%">
+        <img src="p2-images/p2-gallery/written-art/postcard-history/japanese-postal-service.jpg" alt="Artwork" style="width:100%; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
         <div class="hero-text" style="text-align: left; line-height: 300%;">
-          <h2>WORK NAME</h2>
-          <p><strong>Artist</strong></p>
-          <p>(dates of artist)</p>
-          <p>From the series/source/origin</p>
-          <p><em>Title of series</em></p>
-          <p>Era/Period of Time</p>
+          <h2>JAPANESE POSTAL SERVICE</h2>
+          <p><strong>Unnamed Artist</strong></p>
+          <p>1905</p>
         </div>
       </div>
 
-      <!-- Item 3: Image + info -->
       <div>
-        <img src="image-link" alt="Artwork" style="width:100%;">
+        <img src="p2-images/p2-gallery/written-art/postcard-history/view-of-post-office.jpg" alt="Artwork" style="width:100%; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
         <div class="hero-text" style="text-align: left; line-height: 300%;">
-          <h2>WORK NAME</h2>
-          <p><strong>Artist</strong></p>
-          <p>(dates of artist)</p>
-          <p>From the series/source/origin</p>
-          <p><em>Title of series</em></p>
-          <p>Era/Period of Time</p>
+          <h2>VIEW OF THE POST OFFICE IN KANDA, TOKYO</h2>
+          <p><strong>Unnamed Artist</strong></p>
+          <p><em>Postcard</em></p>
+          <p>1906</p>
         </div>
+
       </div>
 
       <div>
@@ -178,12 +273,16 @@
             By 1887, postcards had become the most popular form of mail in Japan. This status only increased with the sanctioning of privately published cards in 1900. Within a few years postcards of all types were offered in shops, displacing the establishments that had once sold woodblock prints.
             While some careds were quite inexpensive, others were more aesthetic, even luxurious productions. Publishing houses in Tokyo, such as Hakubunkan and Shun'yōdō, issued sets of such cards. In addition Hakubunkan included tear-out postcard supplements in its popular journals <i>Chūgaku sekai</i>
             (World of Middle School Students), and <i>Jogaku sekai</i> (World of Female Students), and a member of its founding fmaily estbalished the Japan Postcard Assocation and published issues of <i>Hagaki bungaku</i> (Literature of Postcards) in 1904. Many of the leading artists of the day, trained in
-            a variety of genres, along with graphic designers, were comissioned to create innovative postcard compositions. Printing houses employed exciting new techniques recently introduced from the West. that facilitated the mass production of multicolored images.
+            a variety of genres, along with graphic designers, were comissioned to create innovative postcard compositions. Printing houses employed exciting new techniques recently introduced from the West. that facilitated the mass production of multicolored images...<br><br><i>*Read more in the full text</i>
         </p>
       </div>
 
     </div>
   </div>
+
+  <a href="pcc-in-japan.html" class="corner-button back">← BACK</a>
+  <a href="postcards-observed.html" class="corner-button next">NEXT →</a>
+
 </section>
 
 </body>

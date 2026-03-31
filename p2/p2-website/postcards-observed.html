@@ -42,34 +42,88 @@
 }
 
 .page-wrapper {
-  margin-left: 20%;
-  margin-right: 20%;
-  text-align: left;
-  display: block; /* remove flex centering */
+  margin-bottom: 20%;
 }
 
-/* Ensure box-grid inside page-wrapper aligns left */
-.page-wrapper .box-grid {
-  display: grid;                     /* ensure it's a grid */
-  grid-template-columns: repeat(2, 1fr); /* keep your two columns */
-  gap: 3%;                           /* spacing between columns */
-  justify-items: start;              /* align content to the left in each column */
-  align-items: start;                /* <-- align items at the top */
-}
+@media (max-width: 768px) {
 
-/* Remove extra margin from <p> inside grid */
-.page-wrapper .box-grid p {
-  margin: 0;
-}
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 5%;
+  }
 
-/* Ensure headings line up with paragraph */
-.page-wrapper h1,
-.page-wrapper h2,
-.page-wrapper p {
-  margin-left: 0;
-  margin-right: 0;
-  text-align: left;
+  /* Links and dropdown buttons */
+  .navbar a,
+  .dropbtn {
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+  }
 
+  /* Dropdown menus full width and scrollable if needed */
+  .dropdown-content {
+    min-width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  /* Optional: adjust spacing for dropdown links */
+  .dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+  }
+
+
+  .box-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .box-grid img,
+  .box-grid > div {
+    width: 100% !important;
+  }
+
+  section.content,
+  .page-wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 25px !important; /* pushes content under navbar */
+    padding-bottom: 25px !important; /* extra bottom space for scrolling */
+  }
+
+  .hero-text {
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  h1 { font-size: 1.8rem !important; }
+  h2 { font-size: 1.2rem !important; }
+  p  { font-size: 1rem !important; }
+
+  .page-wrapper {
+    margin-bottom: 20px !important;
+  }
+
+  .carousel-content {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .carousel-content img {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .carousel-content > div {
+    margin-top: 0 !important;
+  }
 }
 
 </style>
@@ -92,7 +146,7 @@
             <div class="dropdown">
                 <div class="dropbtn"><a href="gallery.html" style="color:black">GALLERY</a></div>
                     <div class="dropdown-content">
-                        <a href="written-art.html">WORKS FROM THE WRITINGS</a>
+                        <a href="written-art.html">POSTCARDS FROM THE WRITINGS</a>
                         <a href="postcard-history-art.html">POSTCARD HISTORY ART</a>
                         <a href="russo-japanese.html">THE RUSSO-JAPANESE WAR</a>
                         <a href="artist-cards.html">ARTIST CARDS</a>
@@ -106,17 +160,16 @@
         </div>
     </div>
 
-<section class="content">
+<section class="content" style="margin-left: 20%; margin-right:20%; align-items: center;">
   <div class="box-grid">  
-    <img src="image-link" alt="Artwork">
+    <img src="p2-images/p2-gallery/written-art/postcards-observed/eight-oclock.jpg" alt="Artwork" style="width:80%; height: auto; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
 
     <div class="hero-text" style="text-align: left;">
-      <h2>WORK NAME</h2><br><br>
-      <p><strong>Artist</strong></p>
-      <p>(dates of artist)</p>
-      <p>From the series/source/origin</p>
-      <p><em>Title of series</em></p>
-      <p>Era/Period of Time</p>
+      <h2 style="text-align: left">EIGHT O'CLOCK DURING THE DAY IN THE YOSHIWARA</h2><br><br>
+      <p><strong>Odake Kokkan (1880-1945)</strong></p>
+      <p>From series <i>The twelve hours of the Yoshiwara</i></p>
+      <p><em>Postcard</em></p>
+      <p>1906</p>
     </div>
   </div>
 </section>
@@ -127,9 +180,8 @@
     <h1>POSTCARDS OBSERVED: NOTES ON PRINTING TECHNIQUES</h1>
     <h2>JOAN WRIGHT</h2>
 
-    <div class="box-grid">
+    <div class="box-grid" style="gap:10%">
 
-      <!-- Item 1: Text -->
       <div>
         <p>
             Japan's enthusiastic adoption in the early twentieth century of modern Western printing technology faciliated the mass production of multicolored images, including the new and vibrant popular art form of postcards. From about 1905
@@ -142,22 +194,19 @@
         </p>
       </div>
 
-      <!-- Item 2: Image + info -->
       <div>
-        <img src="image-link" alt="Artwork" style="width:100%">
-        <div class="hero-text" style="text-align: left; line-height: 300%;">
-          <h2>WORK NAME</h2>
-          <p><strong>Artist</strong></p>
+        <img src="p2-images/p2-gallery/written-art/postcards-observed/calpis.jpg" alt="Artwork" style="width:100%; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
+        <div class="hero-text" style="text-align: left; line-height: 300%">
+          <h2>CALPIS: SECOND PRIZE WINNER FOR POSTER DESIGN</h2>
+          <p><strong>Max Bittorf</strong></p>
           <p>(dates of artist)</p>
-          <p>From the series/source/origin</p>
-          <p><em>Title of series</em></p>
-          <p>Era/Period of Time</p>
+          <p><em>Postcard</em></p>
+          <p>1924</p>
         </div>
       </div>
 
-      <!-- Item 3: Image + info -->
       <div>
-        <img src="image-link" alt="Artwork" style="width:100%;">
+        <img src="p2-images/p2-gallery/written-art/postcards-observed/wandering-minstrels.jpg" alt="Artwork" style="width:100%; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
         <div class="hero-text" style="text-align: left; line-height: 300%;">
           <h2>POSTCARD SENT BY MORI ŌGAI TO HIS SON OTTO</h2>
           <p><strong>Unamed Artist</strong></p>
@@ -179,12 +228,15 @@
 
             Of the imported printing techniques, lithography was among the most widespread, having come to Japan at the beginning of the Meiji era. By 1903, lithography that used multiple plates to print large runs fo color images was commonplace. The technique is based on the principle
             that oil and water do not mix. In the process, an image is drawn direclty on or transferred to a flat printing surface (either stones or metal plates), manually with greasy materiasl or photographically. The printing ink is then applies to the moistened plate with a roller...
-
+            <br><br><i>*Read more in the full text</i>
         </p>
       </div>
 
     </div>
   </div>
+
+  <a href="postcard-history.html" class="corner-button back">← BACK</a>
+
 </section>
 
 </body>
