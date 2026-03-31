@@ -1,11 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Two Section Carousel Paging</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <style>
+        .archive-carousel {
+            align-items: center;
+            padding: 40% 0%; /* 40px top and bottom, 0 left and right */
+            overflow-y:hidden;
+        }
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+    gap: 8%;
+    padding: 10px 5%;
+  }
+
+  .navbar a,
+  .dropbtn {
+    font-size: 1rem;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+    max-height: 250px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+  }
+
+  .box-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .box-grid img,
+  .box-grid > div {
+    width: 100% !important;
+  }
+
+
+  .hero-text {
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  h1 { font-size: 1.8rem !important; }
+  h2 { font-size: 1.2rem !important; }
+  p  { font-size: 1rem !important; }
+
+  .page-wrapper {
+    margin-bottom: 20px !important;
+  }
+
+  .carousel-content {
+    flex-direction: column !important;
+    align-items: center;
+    overflow-y: scroll;
+  }
+
+  .carousel-content img {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .carousel-content > div {
+    margin-top: 0 !important;
+  }
+  .archive-carousel .carousel-content {
+    gap: 50px !important; /* increase from 20px to 50px (adjust as needed) */
+}
+
+    .archive-carousel .carousel-content img {
+        width: 70% !important; /* full width on mobile */
+        height: auto !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+
+    </style>
+
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" style="color: black">HOME</a>
+              
+            <div class="dropdown">
+                <div class="dropbtn" style="color:black"> WRITINGS</div>
+                    <div class="dropdown-content">
+                        <a href="intro.html">INTRO: ART OF THE JAPANESE POSTCARD</a>
+                        <a href="wider-world.html">AN OPENING INTO A WIDER WORLD</a>
+                        <a href="pcc-in-japan.html">POSTCARDS, COMMERCE, AND CREATIVITY IN JAPAN</a>
+                        <a href="postcard-history.html">POSTCARD HISTORY</a>
+                        <a href="postcards-observed.html">POSTCARDS OBSERVED</a>
+                    </div>
+            </div>
+            
+            <div class="dropdown">
+                <div class="dropbtn"><a href="gallery.html" style="color:#f04936">GALLERY</a></div>
+                    <div class="dropdown-content">
+                        <a href="written-art.html">WORKS FROM THE WRITINGS</a>
+                        <a href="postcard-history-art.html">POSTCARD HISTORY ART</a>
+                        <a href="russo-japanese.html">THE RUSSO-JAPANESE WAR</a>
+                        <a href="artist-cards.html">ARTIST CARDS</a>
+                        <a href="nouveau.html">ART NOUVEAU</a>
+                        <a href="deco.html">ART DECO</a>
+                        <a href="humor.html">THE WORLD OF HUMOR</a>
+                        <a href="advertising.html">ADVERTISING</a>
+                        <a href="new-years.html">NEW YEAR'S GREETINGS</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+<section class="archive-carousel active" id="carousel1">
+  <div class="carousel-content diagonal full-screen" style="display:flex; gap:20px;">
+    <div style="flex:1;">
+    <img src="p2-images/p2-gallery/art-nouveau/sunset-over-ocean.jpg" alt="Artwork" style="width:65%;height:auto; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
+        <div class="hero-text" style="text-align: left; line-height: 300%;">
+          <h2 style="text-align: left">GEISHA AND BIWA</h2>
+          <p><strong>Fujishima Takeji (1876-1943)</strong></p>
+          <p>From series <i>Beautiful women and music</i></p>
+          <p>1905</p>
+        </div>
+      </div>
+
+    <!-- Image 2 bottom-right, text above -->
+    <div style="flex:1; margin-top:80px;">
+      <div class="hero-text" style="text-align: left; line-height: 300%;">
+        <h2 style="text-align: left">THE WEST: SPARROWS IN THE PARK</h2>
+        <p><strong>Nakamura Fusetsu (1866-1943)</strong></p>
+          <p><strong></strong></p>
+          <p>From series <i>World Panorama</i></p>
+        <p>Late Meiji Seriesa</p>
+      </div>
+    <img src="p2-images/p2-gallery/art-nouveau/two-women-conferring.jpg" alt="Artwork" style="width:65%;height:auto;box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
+    </div>
+  </div>
+</section>
+
+<!-- Carousel Section 2: Horizontal side-by-side -->
+<section class="archive-carousel" id="carousel2">
+  <div class="carousel-content horizontal full-screen" style="display:flex; gap:20px;">
+    <!-- Image 3 -->
+    <div style="flex:1;">
+      <img src="p2-images/p2-gallery/art-nouveau/makeshift-gentleman.jpg" alt="Artwork 3" style="width:65%;height:auto;box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
+      <div class="hero-text" style="text-align: left; line-height: 300%;">
+        <h2 style="text-align: left">THE WEST: SPARROWS IN THE PARK</h2>
+        <p><strong>Nakamura Fusetsu (1866-1943)</strong></p>
+          <p><strong></strong></p>
+          <p>From series <i>World Panorama</i></p>
+        <p>Late Meiji Era</p>
+      </div>
+    </div>
+
+    <!-- Image 4 -->
+    <div style="flex:1;">
+      <img src="p2-images/p2-gallery/art-nouveau/angel-with-lilies.jpg" alt="Artwork 4" style="width:100%; width:65%;height:auto;box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
+      <div class="hero-text" style="text-align: left; line-height: 300%;">
+        <h2 style="text-align: left">THE WEST: SPARROWS IN THE PARK</h2>
+        <p><strong>Nakamura Fusetsu (1866-1943)</strong></p>
+          <p><strong></strong></p>
+          <p>From series <i>World Panorama</i></p>
+        <p>Late Meiji Seriesa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Carousel Section 3: Diagonal -->
+<section class="archive-carousel" id="carousel3">
+  <div class="carousel-content diagonal full-screen" style="display:flex; gap:20px;">
+    <!-- Image 5 top-left, text below -->
+    <div style="flex:1;">
+      <img src="p2-images/p2-gallery/art-nouveau/ducks-swimming.jpg" alt="Artwork 5" style="width:100%; width:65%;height:auto;box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
+      <div class="hero-text" style="text-align: left; line-height: 300%;">
+        <h2 style="text-align: left">THE WEST: SPARROWS IN THE PARK</h2>
+        <p><strong>Nakamura Fusetsu (1866-1943)</strong></p>
+          <p><strong></strong></p>
+          <p>From series <i>World Panorama</i></p>
+        <p>Late Meiji Seriesa</p>
+      </div>
+    </div>
+
+    <!-- Image 6 bottom-right, text above -->
+    <div style="flex:1; margin-top:80px;">
+      <div class="hero-text" style="text-align: left; line-height: 300%;">
+        <h2 style="text-align: left">THE WEST: SPARROWS IN THE PARK</h2>
+        <p><strong>Nakamura Fusetsu (1866-1943)</strong></p>
+          <p><strong></strong></p>
+          <p>From series <i>World Panorama</i></p>
+        <p>Late Meiji Seriesa</p>
+      </div>
+      <img src="p2-images/p2-gallery/art-nouveau/gourd-and-cross.jpg" alt="Artwork 6" style="width:100%;height:auto;box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 5px;">
+    </div>
+  </div>
+</section>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <button class="carousel-button" id="prevBtn" aria-label="Previous Section">&#8592;</button>
+    <button class="carousel-button" id="nextBtn" aria-label="Next Section"> &#8594;</button>
+  </div>
+
+<script>
+  // Include all four carousel sections
+  const sections = [
+    document.getElementById('carousel1'),
+    document.getElementById('carousel2'),
+    document.getElementById('carousel3'),
+  ];
+
+  let currentIndex = 0;
+
+  const showSection = index => {
+    sections.forEach((sec, i) => {
+      sec.classList.toggle('active', i === index);
+    });
+  };
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + sections.length) % sections.length;
+    showSection(currentIndex);
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % sections.length;
+    showSection(currentIndex);
+  });
+</script>
+
+</body>
+</html>
 </body>
 </html>
