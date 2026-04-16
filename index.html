@@ -12,6 +12,60 @@
 <body>
     <h1>Celine's Class Website</h1>
 
+    <script>
+      // list of images you like
+const images = [
+  "star_critter.png",
+  "moon.png",
+  "sonny_angel.png",
+  "img4.jpg"
+];
+
+// create image element
+const img = document.createElement("img");
+
+// enforce consistent sizing purely via JS
+img.style.width = "400px";
+img.style.height = "400px";
+img.style.objectFit = "cover";
+img.style.display = "block";
+img.style.margin = "0 auto";
+img.style.borderRadius = "16px";
+img.style.transition = "opacity 0.6s ease";
+
+// add to page
+document.body.appendChild(img);
+
+// start with random image
+let current = Math.floor(Math.random() * images.length);
+img.src = images[current];
+
+// function to change image
+function changeImage() {
+  img.style.opacity = "0";
+
+  setTimeout(() => {
+    let next;
+
+    // avoid repeating same image
+    do {
+      next = Math.floor(Math.random() * images.length);
+    } while (next === current);
+
+    current = next;
+    img.src = images[current];
+
+    img.style.opacity = "1";
+  }, 400);
+}
+
+// auto-shift every 3 seconds
+setInterval(changeImage, 3000);
+
+    </script>
+
+    <br><br><br><br><br>
+
     <div class="box-grid">
     <section>
       <h2>Designer Info</h2>
@@ -23,7 +77,8 @@
       <h2>Writing Exercises</h2>
       <ul>
         <li><a href="writing1.html">What is a fulfilling ritual or routine?</a></li>  
-        <li><a href="writing2.html">Human-Made Creation that Brings out the Best</a></li>
+        <li><a href="writing2.html">What is a man-made creation that brings out the best in you?</a></li>
+        <li><a href="writing3.html">When do you cherish the slow or hard way?</a></li>
       </ul>    
     </section>
 
@@ -38,6 +93,7 @@
       <h2>Interview</h2>
       <a href="interview.html">Bridging Imagination to Technicality: The Art within Accounting (~20 minutes)</a>
       <br>
+
       </section>
 
     <section>
