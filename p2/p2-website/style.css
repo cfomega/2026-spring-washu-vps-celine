@@ -490,12 +490,9 @@ button.carousel-button:hover {
 
 @media (max-width: 768px) {
 
-@media (max-width: 768px) {
-
-  /* Make grid one column */
   .box-grid {
     grid-template-columns: 1fr !important;
-    gap: 30px;
+    gap: 5%;
   }
 
   /* Full width for images and text blocks */
@@ -509,18 +506,17 @@ button.carousel-button:hover {
   .archive-carousel {
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
-  /* Top padding so content appears below fixed navbar */
   .archive-carousel,
   section.content {
     padding-top: 100px !important; /* adjust if your navbar is taller */
     padding-bottom: 50px !important; /* spacing at bottom for scrolling */
   }
 
-  /* Hero text adjustments */
+
   .hero-text {
     text-align: left;
     padding: 0 5px;
@@ -531,7 +527,6 @@ button.carousel-button:hover {
   h2 { font-size: 1.2rem !important; }
   p  { font-size: 1rem !important; }
 
-  /* Carousel adjustments */
   .carousel-content {
     flex-direction: column !important;
     align-items: center;
@@ -543,14 +538,11 @@ button.carousel-button:hover {
   }
 
   .carousel-content > div {
-    margin-top: 0 !important; /* remove diagonal offset */
+    margin-top: 0 !important; 
   }
 
-  /* Panel 2 overscroll fix */
   .panel2 .box-grid {
     display: block !important;
     overflow-x: hidden;
   }
-}
-
 }
